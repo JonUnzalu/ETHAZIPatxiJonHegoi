@@ -1,0 +1,2 @@
+# ETHAZIPatxiJonHegoi
+ETHAZI Proiektuko errepositorioa
