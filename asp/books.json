@@ -66,7 +66,7 @@
     "language": "Old Norse",
     "link": "https://en.wikipedia.org/wiki/Nj%C3%A1ls_saga\n",
     "pages": 384,
-    "title": "Nj\u00e1l's Saga",
+    "title": "Njal's Saga",
     "year": 1350
   },
   {
@@ -80,13 +80,13 @@
     "year": 1813
   },
   {
-    "author": "Honor\u00e9 de Balzac",
+    "author": "Honore de Balzac",
     "country": "France",
     "imageLink": "images/le-pere-goriot.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Le_P%C3%A8re_Goriot\n",
     "pages": 443,
-    "title": "Le P\u00e8re Goriot",
+    "title": "Le Pere Goriot",
     "year": 1835
   },
   {
@@ -150,7 +150,7 @@
     "year": 1952
   },
   {
-    "author": "Louis-Ferdinand C\u00e9line",
+    "author": "Louis-Ferdinand Celine",
     "country": "France",
     "imageLink": "images/voyage-au-bout-de-la-nuit.jpg",
     "language": "French",
@@ -220,7 +220,7 @@
     "year": 1796
   },
   {
-    "author": "Alfred D\u00f6blin",
+    "author": "Alfred Doblin",
     "country": "Germany",
     "imageLink": "images/berlin-alexanderplatz.jpg",
     "language": "German",
@@ -340,7 +340,7 @@
     "year": 1869
   },
   {
-    "author": "Federico Garc\u00eda Lorca",
+    "author": "Federico Garcia Lorca",
     "country": "Spain",
     "imageLink": "images/gypsy-ballads.jpg",
     "language": "Spanish",
@@ -350,7 +350,7 @@
     "year": 1928
   },
   {
-    "author": "Gabriel Garc\u00eda M\u00e1rquez",
+    "author": "Gabriel Garcia Marquez",
     "country": "Colombia",
     "imageLink": "images/one-hundred-years-of-solitude.jpg",
     "language": "Spanish",
@@ -360,7 +360,7 @@
     "year": 1967
   },
   {
-    "author": "Gabriel Garc\u00eda M\u00e1rquez",
+    "author": "Gabriel Garcia Marquez",
     "country": "Colombia",
     "imageLink": "images/love-in-the-time-of-cholera.jpg",
     "language": "Spanish",
@@ -390,7 +390,7 @@
     "year": 1842
   },
   {
-    "author": "G\u00fcnter Grass",
+    "author": "Gunter Grass",
     "country": "Germany",
     "imageLink": "images/the-tin-drum.jpg",
     "language": "German",
@@ -400,7 +400,7 @@
     "year": 1959
   },
   {
-    "author": "Jo\u00e3o Guimar\u00e3es Rosa",
+    "author": "Joao Guimaraes Rosa",
     "country": "Brazil",
     "imageLink": "images/the-devil-to-pay-in-the-backlands.jpg",
     "language": "Portuguese",
@@ -500,7 +500,7 @@
     "year": 1926
   },
   {
-    "author": "K\u0101lid\u0101sa",
+    "author": "Kalidasa",
     "country": "India",
     "imageLink": "images/the-recognition-of-shakuntala.jpg",
     "language": "Sanskrit",
@@ -740,7 +740,7 @@
     "year": 1920
   },
   {
-    "author": "Fran\u00e7ois Rabelais",
+    "author": "Fransois Rabelais",
     "country": "France",
     "imageLink": "images/gargantua-and-pantagruel.jpg",
     "language": "French",
@@ -756,7 +756,7 @@
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Pedro_P%C3%A1ramo\n",
     "pages": 124,
-    "title": "Pedro P\u00e1ramo",
+    "title": "Pedro Paramo",
     "year": 1955
   },
   {
@@ -800,7 +800,7 @@
     "year": 1966
   },
   {
-    "author": "Jos\u00e9 Saramago",
+    "author": "Jose Saramago",
     "country": "Portugal",
     "imageLink": "images/blindness.jpg",
     "language": "Portuguese",
