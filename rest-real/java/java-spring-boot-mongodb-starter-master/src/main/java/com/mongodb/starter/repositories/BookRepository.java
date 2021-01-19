@@ -22,6 +22,8 @@ public interface BookRepository {
     long count();
 
     long delete(String id);
+    
+    long deleteOneNum(int num);
 
     long delete(List<String> _ids);
 

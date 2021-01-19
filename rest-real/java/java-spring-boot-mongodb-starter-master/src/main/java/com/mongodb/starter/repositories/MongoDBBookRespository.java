@@ -42,6 +42,7 @@ import com.mongodb.TransactionOptions;
 import com.mongodb.WriteConcern;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.result.DeleteResult;
 import com.mongodb.starter.dtos.AveragePageBOOK;
 import com.mongodb.starter.models.Book;
 import javax.annotation.PostConstruct;
@@ -123,7 +124,14 @@ public class MongoDBBookRespository implements BookRepository {
             return clientSession.withTransaction(
                     () -> bookCollection.deleteMany(clientSession, in("_id", mapToObjectIds(ids))).getDeletedCount(),
                     txnOptions);
-        }    }
+        }    
+    }
+    
+    @Override
+    public long deleteOneNum(int num) {
+        DeleteResult deleted = bookCollection.deleteOne(eq("num", num));
+        return deleted.getDeletedCount();
+    }
 
     @Override
     public long deleteAll() {

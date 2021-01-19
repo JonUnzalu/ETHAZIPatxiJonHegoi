@@ -88,6 +88,11 @@ public class BookController {
     public Long deleteBook(@PathVariable String id) {
         return bookRepository.delete(id);
     }
+    
+    @DeleteMapping("book/{num}")
+    public Long deleteBookByNum(@PathVariable int num) {
+        return bookRepository.deleteOneNum(num);
+    }
 
     @DeleteMapping("books/{ids}")
     public Long deleteBooks(@PathVariable String ids) {
