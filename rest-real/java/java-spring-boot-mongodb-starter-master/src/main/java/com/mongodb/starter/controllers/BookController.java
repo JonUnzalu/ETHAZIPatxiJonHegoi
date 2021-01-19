@@ -89,7 +89,7 @@ public class BookController {
         return bookRepository.delete(id);
     }
     
-    @DeleteMapping("book/{num}")
+    @DeleteMapping("book/delete/{num}")
     public Long deleteBookByNum(@PathVariable int num) {
         return bookRepository.deleteOneNum(num);
     }

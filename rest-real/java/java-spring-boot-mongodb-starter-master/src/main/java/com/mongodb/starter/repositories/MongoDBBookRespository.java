@@ -129,11 +129,7 @@ public class MongoDBBookRespository implements BookRepository {
     
     @Override
     public long deleteOneNum(int num) {
-        try (ClientSession clientSession = client.startSession()) {
-            return clientSession.withTransaction(
-                    () -> bookCollection.deleteOne(clientSession, in("num", num)).getDeletedCount(),
-                    txnOptions);
-        }
+        return bookCollection.deleteOne(eq("num", num)).getDeletedCount();  
     }
 
     @Override
