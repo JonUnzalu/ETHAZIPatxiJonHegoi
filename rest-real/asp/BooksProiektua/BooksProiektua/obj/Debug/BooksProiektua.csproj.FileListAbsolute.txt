@@ -157,8 +157,8 @@ C:\Users\barrutia.patxi\Documents\GitHub\ETHAZIPatxiJonHegoi\rest-real\asp\Books
 C:\Users\barrutia.patxi\Documents\GitHub\ETHAZIPatxiJonHegoi\rest-real\asp\BooksProiektua\BooksProiektua\bin\es\System.Web.Webpages.Razor.resources.dll
 C:\Users\barrutia.patxi\Documents\GitHub\ETHAZIPatxiJonHegoi\rest-real\asp\BooksProiektua\BooksProiektua\bin\es\System.Web.Helpers.resources.dll
 C:\Users\barrutia.patxi\Documents\GitHub\ETHAZIPatxiJonHegoi\rest-real\asp\BooksProiektua\BooksProiektua\bin\es\System.Web.Mvc.resources.dll
-C:\Users\barrutia.patxi\Documents\GitHub\ETHAZIPatxiJonHegoi\rest-real\asp\BooksProiektua\BooksProiektua\obj\Debug\BooksProiektua.csprojAssemblyReference.cache
 C:\Users\barrutia.patxi\Documents\GitHub\ETHAZIPatxiJonHegoi\rest-real\asp\BooksProiektua\BooksProiektua\obj\Debug\BooksProiektua.csproj.CoreCompileInputs.cache
 C:\Users\barrutia.patxi\Documents\GitHub\ETHAZIPatxiJonHegoi\rest-real\asp\BooksProiektua\BooksProiektua\obj\Debug\BooksProiektua.csproj.CopyComplete
 C:\Users\barrutia.patxi\Documents\GitHub\ETHAZIPatxiJonHegoi\rest-real\asp\BooksProiektua\BooksProiektua\obj\Debug\BooksProiektua.dll
 C:\Users\barrutia.patxi\Documents\GitHub\ETHAZIPatxiJonHegoi\rest-real\asp\BooksProiektua\BooksProiektua\obj\Debug\BooksProiektua.pdb
+C:\Users\barrutia.patxi\Documents\GitHub\ETHAZIPatxiJonHegoi\rest-real\asp\BooksProiektua\BooksProiektua\obj\Debug\BooksProiektua.csprojAssemblyReference.cache

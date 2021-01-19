@@ -68,6 +68,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.year)
         </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { action = 1, id = item.num})
+        </td>
     </tr>
 }
 

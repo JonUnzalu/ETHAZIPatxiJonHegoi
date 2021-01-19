@@ -11,10 +11,16 @@ namespace BooksProiektua.Controllers
 {
     public class HomeController : Controller
     {
+
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         //Hosted web API REST Service base url  
         string Baseurl = "http://192.168.72.13:8080/";
 
-        public async Task<ActionResult> Select()
+        public async Task<ActionResult> Select(int action, int id)
         {
             List<Book> BookInfo = new List<Book>();
             using (var client = new HttpClient())
@@ -25,6 +31,11 @@ namespace BooksProiektua.Controllers
                 client.DefaultRequestHeaders.Clear();
                 //Define request data format  
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                if (action == 1)
+                {
+                    
+                }
 
                 //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
                 HttpResponseMessage Res = await client.GetAsync("api/books");
@@ -42,6 +53,11 @@ namespace BooksProiektua.Controllers
                 //returning the employee list to view  
                 return View(BookInfo);
             }
+        }
+
+        public ActionResult InsertForm()
+        {
+            return View();
         }
 
         public async Task<ActionResult> Insert()
@@ -72,6 +88,11 @@ namespace BooksProiektua.Controllers
                 //returning the employee list to view  
                 return View(BookInfo);
             }
+        }
+
+        public async Task<ActionResult> Delete(int num)
+        {
+            return View();
         }
     }
 }
