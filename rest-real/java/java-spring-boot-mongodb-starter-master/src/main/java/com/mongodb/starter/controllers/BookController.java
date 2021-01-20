@@ -102,7 +102,7 @@ public class BookController {
 
     @DeleteMapping("books")
     public Long deleteBooks() {
-        return bookRepository.deleteAll();
+        return null;// bookRepository.deleteAll();
     }
 
     @PutMapping("book")
