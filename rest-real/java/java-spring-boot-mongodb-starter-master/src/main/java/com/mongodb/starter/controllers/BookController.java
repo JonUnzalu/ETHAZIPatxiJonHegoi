@@ -6,7 +6,6 @@
 package com.mongodb.starter.controllers;
 
 import com.mongodb.starter.models.Book;
-import com.mongodb.starter.models.Person;
 import com.mongodb.starter.repositories.BookRepository;
 import static java.util.Arrays.asList;
 import java.util.List;
