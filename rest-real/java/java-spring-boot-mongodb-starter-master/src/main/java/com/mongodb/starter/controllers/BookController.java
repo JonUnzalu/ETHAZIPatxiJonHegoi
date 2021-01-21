@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * This is the class that will act as the controller for Book.java, controlling all the methos available
+ * This is the class that will act as the controller for Book.java, controlling all the methods available
  */
 @RestController
 @RequestMapping("/api")
