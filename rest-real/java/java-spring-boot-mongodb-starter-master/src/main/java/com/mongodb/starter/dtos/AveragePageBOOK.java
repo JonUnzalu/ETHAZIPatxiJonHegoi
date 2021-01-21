@@ -9,7 +9,7 @@ import java.util.Objects;
 
 /**
  *
- * @author unzalu.jon
+ * This is the starter for the average of books
  */
 public class AveragePageBOOK {
     
@@ -17,7 +17,7 @@ public class AveragePageBOOK {
 
     /**
      *
-     * @return
+     * This is the getter for average of pages
      */
     public double getAveragePages() {
         return averagePages;
@@ -25,7 +25,7 @@ public class AveragePageBOOK {
 
     /**
      *
-     * @param averagePages
+     * This is the setter for average of pages 
      */
     public void setAveragePages(double averagePages) {
         this.averagePages = averagePages;
@@ -33,8 +33,8 @@ public class AveragePageBOOK {
 
     /**
      *
-     * @param o
-     * @return
+     * This is the equals
+     * 
      */
     @Override
     public boolean equals(Object o) {
@@ -48,7 +48,7 @@ public class AveragePageBOOK {
 
     /**
      *
-     * @return
+     * This is the hashCode of the starter
      */
     @Override
     public int hashCode() {
