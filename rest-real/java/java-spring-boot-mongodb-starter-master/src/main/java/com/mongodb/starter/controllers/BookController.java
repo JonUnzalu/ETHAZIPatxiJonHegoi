@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author unzalu.jon
+ * This is the class that will act as the controller for Book.java, controlling all the methods available
  */
 @RestController
 @RequestMapping("/api")
@@ -37,7 +37,7 @@ public class BookController {
 
     /**
      *
-     * @param bookRepository
+     * This is the constructor, I guess, I hope so
      */
     public BookController(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
@@ -45,8 +45,8 @@ public class BookController {
 
     /**
      *
-     * @param book
-     * @return
+     * A method that creates a new book and saves it using POST
+     * 
      */
     @PostMapping("book")
     @ResponseStatus(HttpStatus.CREATED)
@@ -56,8 +56,7 @@ public class BookController {
 
     /**
      *
-     * @param books
-     * @return
+     * A method that creates new books and saves them using POST
      */
     @PostMapping("books")
     @ResponseStatus(HttpStatus.CREATED)
@@ -67,7 +66,7 @@ public class BookController {
 
     /**
      *
-     * @return
+     * A method to get all the books stored
      */
     @GetMapping("books")
     public List<Book> getBooks() {
@@ -76,8 +75,8 @@ public class BookController {
 
     /**
      *
-     * @param id
-     * @return
+     * A method to get a single book using the id as the variable
+     * 
      */
     @GetMapping("book/{id}")
     public ResponseEntity<Book> getBook(@PathVariable String id) {
@@ -89,8 +88,8 @@ public class BookController {
     
     /**
      *
-     * @param num
-     * @return
+     * A method to get a single book using the num as the variable
+     * 
      */
     @GetMapping("book/num/{num}")
     public ResponseEntity<Book> getBookByNum(@PathVariable int num) {
@@ -102,8 +101,8 @@ public class BookController {
 
     /**
      *
-     * @param ids
-     * @return
+     * A method to get books using ids as the variable
+     * 
      */
     @GetMapping("books/{ids}")
     public List<Book> getBooks(@PathVariable String ids) {
@@ -113,7 +112,7 @@ public class BookController {
 
     /**
      *
-     * @return
+     * A method to get the amount of books stored
      */
     @GetMapping("books/count")
     public Long getCount() {
@@ -122,8 +121,8 @@ public class BookController {
 
     /**
      *
-     * @param id
-     * @return
+     *A method to delete a single book using the id as a variable
+     * 
      */
     @DeleteMapping("book/{id}")
     public Long deleteBook(@PathVariable String id) {
@@ -132,8 +131,8 @@ public class BookController {
     
     /**
      *
-     * @param num
-     * @return
+     * A method to delete a single book using the num as a variable
+     * 
      */
     @DeleteMapping("book/delete/{num}")
     public Long deleteBookByNum(@PathVariable int num) {
@@ -142,8 +141,8 @@ public class BookController {
 
     /**
      *
-     * @param ids
-     * @return
+     * A method to delete various books using ids as the variable at once
+     * 
      */
     @DeleteMapping("books/{ids}")
     public Long deleteBooks(@PathVariable String ids) {
@@ -153,7 +152,7 @@ public class BookController {
 
     /**
      *
-     * @return
+     * A method to delete all the books (currently disabled)
      */
     @DeleteMapping("books")
     public Long deleteBooks() {
@@ -162,8 +161,8 @@ public class BookController {
 
     /**
      *
-     * @param book
-     * @return
+     * A method to update an existing book
+     * 
      */
     @PutMapping("book")
     public Book putBook(@RequestBody Book book) {
@@ -172,8 +171,8 @@ public class BookController {
 
     /**
      *
-     * @param books
-     * @return
+     * A method to update various books at once
+     *
      */
     @PutMapping("books")
     public Long putBook(@RequestBody List<Book> books) {
@@ -182,7 +181,7 @@ public class BookController {
 
     /**
      *
-     * @return
+     * A method to get the average amount of pages of all the books
      */
     @GetMapping("books/averagePages")
     public Double averagePages() {
@@ -191,8 +190,8 @@ public class BookController {
 
     /**
      *
-     * @param e
-     * @return
+     *A method to hanlde all the exceptions
+     *
      */
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
