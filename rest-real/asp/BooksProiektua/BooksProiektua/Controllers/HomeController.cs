@@ -20,7 +20,7 @@ namespace BooksProiektua.Controllers
         //Hosted web API REST Service base url  
         string Baseurl = "http://192.168.72.13:8080/";
 
-        public async Task<ActionResult> Select(int action, int id)
+        public async Task<ActionResult> Select()
         {
             List<Book> BookInfo = new List<Book>();
             using (var client = new HttpClient())
@@ -31,11 +31,6 @@ namespace BooksProiektua.Controllers
                 client.DefaultRequestHeaders.Clear();
                 //Define request data format  
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                if (action == 1)
-                {
-                    
-                }
 
                 //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
                 HttpResponseMessage Res = await client.GetAsync("api/books");
@@ -60,11 +55,60 @@ namespace BooksProiektua.Controllers
             return View();
         }
 
-        public async Task<ActionResult> Insert()
+        public async Task<ActionResult> Insert(FormCollection collection)
         {
-            List<Book> BookInfo = new List<Book>();
             using (var client = new HttpClient())
             {
+                Book book = new Book();
+                if (!collection["num"].Equals("") && int.TryParse(collection["num"], out int num)
+                    && !collection["author"].Equals("") &&
+                    !collection["country"].Equals("") &&
+                    !collection["imageLink"].Equals("") &&
+                    !collection["language"].Equals("") &&
+                    !collection["link"].Equals("") &&
+                    !collection["pages"].Equals("") && int.TryParse(collection["pages"], out int pages) &&
+                    !collection["title"].Equals("") &&
+                    !collection["year"].Equals("") && int.TryParse(collection["year"], out int year))
+                {
+                    
+                    book.num = int.Parse(collection["num"]);
+                    book.author = collection["author"];
+                    book.country = collection["country"];
+                    book.imageLink = collection["imageLink"];
+                    book.language = collection["language"];
+                    book.link = collection["link"];
+                    book.pages = int.Parse(collection["pages"]);
+                    book.title = collection["title"];
+                    book.year = int.Parse(collection["year"]);
+
+
+
+                    //Passing service base url  
+                    client.BaseAddress = new Uri(Baseurl);
+
+                    client.DefaultRequestHeaders.Clear();
+                    //Define request data format  
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    //Sending request to find web api REST service resource GetAllEmployees using HttpClient
+                    await client.PostAsJsonAsync<Book>("api/book/", book);
+
+                    //returning the employee list to view  
+                    return RedirectToAction("../Home/Select");
+                }
+                else
+                {
+                    return View();
+                }
+
+            }
+        }
+
+        public async Task<ActionResult> Delete(int num)
+        {
+            using (var client = new HttpClient())
+            {
+
                 //Passing service base url  
                 client.BaseAddress = new Uri(Baseurl);
 
@@ -73,26 +117,12 @@ namespace BooksProiektua.Controllers
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
-                HttpResponseMessage Res = await client.GetAsync("api/books");
+                await client.DeleteAsync("api/book/delete/" + num);
 
-                //Checking the response is successful or not which is sent using HttpClient  
-                if (Res.IsSuccessStatusCode)
-                {
-                    //Storing the response details recieved from web api   
-                    var BookResponse = Res.Content.ReadAsStringAsync().Result;
-
-                    //Deserializing the response recieved from web api and storing into the Employee list  
-                    BookInfo = JsonConvert.DeserializeObject<List<Book>>(BookResponse);
-
-                }
                 //returning the employee list to view  
-                return View(BookInfo);
-            }
-        }
+                return RedirectToAction("../Home/Select");
 
-        public async Task<ActionResult> Delete(int num)
-        {
-            return View();
+            }
         }
     }
 }
