@@ -6,7 +6,6 @@
 package com.mongodb.starter.controllers;
 
 import com.mongodb.starter.models.Book;
-import com.mongodb.starter.models.Person;
 import com.mongodb.starter.repositories.BookRepository;
 import static java.util.Arrays.asList;
 import java.util.List;
@@ -33,30 +32,53 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class BookController {
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(PersonController.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(BookController.class);
     private final BookRepository bookRepository;
 
+    /**
+     *
+     * @param bookRepository
+     */
     public BookController(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
 
+    /**
+     *
+     * @param book
+     * @return
+     */
     @PostMapping("book")
     @ResponseStatus(HttpStatus.CREATED)
     public Book postBook(@RequestBody Book book) {
         return bookRepository.save(book);
     }
 
+    /**
+     *
+     * @param books
+     * @return
+     */
     @PostMapping("books")
     @ResponseStatus(HttpStatus.CREATED)
     public List<Book> postBooks(@RequestBody List<Book> books) {
         return bookRepository.saveAll(books);
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("books")
     public List<Book> getBooks() {
         return bookRepository.findAll();
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @GetMapping("book/{id}")
     public ResponseEntity<Book> getBook(@PathVariable String id) {
         Book book = bookRepository.findOne(id);
@@ -65,6 +87,11 @@ public class BookController {
         return ResponseEntity.ok(book);
     }
     
+    /**
+     *
+     * @param num
+     * @return
+     */
     @GetMapping("book/num/{num}")
     public ResponseEntity<Book> getBookByNum(@PathVariable int num) {
         Book book = bookRepository.findOneNum(num);
@@ -73,53 +100,100 @@ public class BookController {
         return ResponseEntity.ok(book);
     }
 
+    /**
+     *
+     * @param ids
+     * @return
+     */
     @GetMapping("books/{ids}")
     public List<Book> getBooks(@PathVariable String ids) {
         List<String> listIds = asList(ids.split(","));
         return bookRepository.findAll(listIds);
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("books/count")
     public Long getCount() {
         return bookRepository.count();
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @DeleteMapping("book/{id}")
     public Long deleteBook(@PathVariable String id) {
         return bookRepository.delete(id);
     }
     
+    /**
+     *
+     * @param num
+     * @return
+     */
     @DeleteMapping("book/delete/{num}")
     public Long deleteBookByNum(@PathVariable int num) {
         return bookRepository.deleteOneNum(num);
     }
 
+    /**
+     *
+     * @param ids
+     * @return
+     */
     @DeleteMapping("books/{ids}")
     public Long deleteBooks(@PathVariable String ids) {
         List<String> listIds = asList(ids.split(","));
         return bookRepository.delete(listIds);
     } 
 
+    /**
+     *
+     * @return
+     */
     @DeleteMapping("books")
     public Long deleteBooks() {
         return null;// bookRepository.deleteAll();
     }
 
+    /**
+     *
+     * @param book
+     * @return
+     */
     @PutMapping("book")
     public Book putBook(@RequestBody Book book) {
         return bookRepository.update(book);
     }
 
+    /**
+     *
+     * @param books
+     * @return
+     */
     @PutMapping("books")
     public Long putBook(@RequestBody List<Book> books) {
         return bookRepository.update(books);
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("books/averagePages")
     public Double averagePages() {
         return bookRepository.getAveragePages();
     }
 
+    /**
+     *
+     * @param e
+     * @return
+     */
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public final Exception handleAllExceptions(RuntimeException e) {

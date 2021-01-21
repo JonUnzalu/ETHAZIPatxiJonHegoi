@@ -16,7 +16,7 @@ import org.bson.types.ObjectId;
 
 /**
  *
- * @author unzalu.jon
+ * This is the class for Book
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Book {
@@ -33,101 +33,200 @@ public class Book {
     private String title;
     private int year;
 
+    /**
+     *
+     * @return
+     */
     public ObjectId getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     public Book setId(ObjectId id) {
         this.id = id;
         return this;
     }
     
+    /**
+     *
+     * @return
+     */
     public int getNum() {
         return num;
     }
 
+    /**
+     *
+     * @param num
+     * @return
+     */
     public Book setNum(int num) {
         this.num = num;
         return this;
     }
     
+    /**
+     *
+     * @return
+     */
     public String getAuthor() {
         return author;
     }
 
+    /**
+     *
+     * @param author
+     * @return
+     */
     public Book setAuthor(String author) {
         this.author = author;
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getCountry() {
         return country;
     }
 
+    /**
+     *
+     * @param country
+     * @return
+     */
     public Book setCountry(String country) {
         this.country = country;
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getImageLink() {
         return imageLink;
     }
 
+    /**
+     *
+     * @param imageLink
+     * @return
+     */
     public Book setImageLink(String imageLink) {
         this.imageLink = imageLink;
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getLanguage() {
         return language;
     }
 
+    /**
+     *
+     * @param language
+     * @return
+     */
     public Book setLanguage(String language) {
         this.language = language;
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getLink() {
         return link;
     }
 
+    /**
+     *
+     * @param link
+     * @return
+     */
     public Book setLink(String link) {
         this.link = link;
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getPages() {
         return pages;
     }
 
+    /**
+     *
+     * @param pages
+     * @return
+     */
     public Book setPages(int pages) {
         this.pages = pages;
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getTitle() {
         return title;
     }
 
+    /**
+     *
+     * @param title
+     * @return
+     */
     public Book setTitle(String title) {
         this.title = title;
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getYear() {
         return year;
     }
 
+    /**
+     *
+     * @param year
+     * @return
+     */
     public Book setYear(int year) {
         this.year = year;
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Book{" + "id=" + id + "num=" + num + "author=" + author + ", country=" + country + ", imagelink=" + imageLink + ", language=" + language + ", link=" + link + ", pages=" + pages + ", title=" + title + ", year=" + year + '}';
     }
 
+    /**
+     *
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -140,6 +239,10 @@ public class Book {
                 Objects.equals(link, book.link) && Objects.equals(title, book.title);
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         return Objects.hash(id, num, author, country, imageLink, language, link, pages, title, year);

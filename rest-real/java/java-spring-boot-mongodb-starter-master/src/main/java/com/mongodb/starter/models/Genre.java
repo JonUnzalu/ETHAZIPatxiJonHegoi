@@ -23,38 +23,74 @@ public class Genre {
     private int genreNum;
     private String name;
 
+    /**
+     *
+     * @return
+     */
     public ObjectId getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     public Genre setId(ObjectId id) {
         this.id = id;
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getGenreNum() {
         return genreNum;
     }
 
+    /**
+     *
+     * @param genreNum
+     * @return
+     */
     public Genre setGenreNum(int genreNum) {
         this.genreNum = genreNum;
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @param name
+     * @return
+     */
     public Genre setName(String name) {
         this.name = name;
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Genre{" + "id=" + id + ", genreNum=" + genreNum + ", name=" + name + '}';
     }
     
+    /**
+     *
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -66,6 +102,10 @@ public class Genre {
         return genreNum == genre.genreNum && Objects.equals(name, genre.name);
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         return Objects.hash(id, genreNum, name);
