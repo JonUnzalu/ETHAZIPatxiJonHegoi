@@ -16,14 +16,39 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserRepository {
+
+    /**
+     *
+     * @param user
+     * @return
+     */
     User save(User user);
     
+    /**
+     *
+     * @param users
+     * @return
+     */
     List<User> saveAll(List<User> users);
 
+    /**
+     *
+     * @return
+     */
     List<User> findAll();
 
+    /**
+     *
+     * @param ids
+     * @return
+     */
     List<User> findAll(List<User> ids);
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     User findOne(String id);
     
     /**
@@ -33,14 +58,37 @@ public interface UserRepository {
      */
     User findOneNum(int num);
 
+    /**
+     *
+     * @return
+     */
     long count();
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     long delete(String id);
     
+    /**
+     *
+     * @param num
+     * @return
+     */
     long deleteOneUser(int num);
 
+    /**
+     *
+     * @return
+     */
     long deleteAll();
 
+    /**
+     *
+     * @param book
+     * @return
+     */
     Book update(Book book);
 
 }

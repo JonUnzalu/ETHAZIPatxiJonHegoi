@@ -14,8 +14,6 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.FindOneAndReplaceOptions;
 import com.mongodb.client.model.ReplaceOneModel;
 import com.mongodb.client.model.WriteModel;
-import com.mongodb.starter.dtos.AverageAgeDTO;
-import com.mongodb.starter.models.Person;
 import org.bson.BsonDocument;
 import org.bson.BsonNull;
 import org.bson.conversions.Bson;
@@ -70,6 +68,11 @@ public class MongoDBBookRespository implements BookRepository {
         bookCollection = client.getDatabase("test").getCollection("books", Book.class);
     }
 
+    /**
+     *
+     * @param book
+     * @return
+     */
     @Override
     public Book save(Book book) {
         book.setId(new ObjectId());
@@ -77,6 +80,11 @@ public class MongoDBBookRespository implements BookRepository {
         return book;    
     }
 
+    /**
+     *
+     * @param books
+     * @return
+     */
     @Override
     public List<Book> saveAll(List<Book> books) {
         try (ClientSession clientSession = client.startSession()) {
@@ -88,16 +96,30 @@ public class MongoDBBookRespository implements BookRepository {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public List<Book> findAll() {
         return bookCollection.find().into(new ArrayList<>());
     }
 
+    /**
+     *
+     * @param ids
+     * @return
+     */
     @Override
     public List<Book> findAll(List<String> ids) {
         return bookCollection.find(in("_id", mapToObjectIds(ids))).into(new ArrayList<>());
     }
     
+    /**
+     *
+     * @param number
+     * @return
+     */
     @Override
     public Book findOneNum(int number) {
         return bookCollection.find(in("num", number)).first();
@@ -132,6 +154,11 @@ public class MongoDBBookRespository implements BookRepository {
         return bookCollection.deleteOne(eq("_id", new ObjectId(id))).getDeletedCount();
     }
 
+    /**
+     *
+     * @param ids
+     * @return
+     */
     @Override
     public long delete(List<String> ids) {
         try (ClientSession clientSession = client.startSession()) {
@@ -141,6 +168,11 @@ public class MongoDBBookRespository implements BookRepository {
         }    
     }
     
+    /**
+     *
+     * @param num
+     * @return
+     */
     @Override
     public long deleteOneNum(int num) {
         return bookCollection.deleteOne(eq("num", num)).getDeletedCount();  
@@ -157,6 +189,11 @@ public class MongoDBBookRespository implements BookRepository {
                     () -> bookCollection.deleteMany(clientSession, new BsonDocument()).getDeletedCount(), txnOptions);
         }    }
 
+    /**
+     *
+     * @param book
+     * @return
+     */
     @Override
     public Book update(Book book) {
         FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
@@ -178,6 +215,10 @@ public class MongoDBBookRespository implements BookRepository {
                     () -> bookCollection.bulkWrite(clientSession, writes).getModifiedCount(), txnOptions);
         }    }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public double getAveragePages() {
         List<Bson> pipeline = asList(group(new BsonNull(), avg("averagePages", "$pages")), project(excludeId()));

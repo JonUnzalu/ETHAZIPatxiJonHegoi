@@ -32,9 +32,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class BookController {
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(PersonController.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(BookController.class);
     private final BookRepository bookRepository;
 
+    /**
+     *
+     * @param bookRepository
+     */
     public BookController(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
@@ -50,6 +54,11 @@ public class BookController {
         return bookRepository.save(book);
     }
 
+    /**
+     *
+     * @param books
+     * @return
+     */
     @PostMapping("books")
     @ResponseStatus(HttpStatus.CREATED)
     public List<Book> postBooks(@RequestBody List<Book> books) {
@@ -78,6 +87,11 @@ public class BookController {
         return ResponseEntity.ok(book);
     }
     
+    /**
+     *
+     * @param num
+     * @return
+     */
     @GetMapping("book/num/{num}")
     public ResponseEntity<Book> getBookByNum(@PathVariable int num) {
         Book book = bookRepository.findOneNum(num);
@@ -86,6 +100,11 @@ public class BookController {
         return ResponseEntity.ok(book);
     }
 
+    /**
+     *
+     * @param ids
+     * @return
+     */
     @GetMapping("books/{ids}")
     public List<Book> getBooks(@PathVariable String ids) {
         List<String> listIds = asList(ids.split(","));
@@ -101,6 +120,11 @@ public class BookController {
         return bookRepository.count();
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @DeleteMapping("book/{id}")
     public Long deleteBook(@PathVariable String id) {
         return bookRepository.delete(id);
@@ -156,6 +180,10 @@ public class BookController {
         return bookRepository.update(books);
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("books/averagePages")
     public Double averagePages() {
         return bookRepository.getAveragePages();

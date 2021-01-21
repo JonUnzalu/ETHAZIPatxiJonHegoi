@@ -45,6 +45,10 @@ public class User {
         return this;
     }
     
+    /**
+     *
+     * @return
+     */
     public int getNum() {
         return num;
     }
@@ -59,10 +63,19 @@ public class User {
         return this;
     }
     
+    /**
+     *
+     * @return
+     */
     public String getUsername() {
         return username;
     }
 
+    /**
+     *
+     * @param username
+     * @return
+     */
     public User setUsername(String username) {
         this.username = username;
         return this;
@@ -76,20 +89,38 @@ public class User {
         return name;
     }
 
+    /**
+     *
+     * @param name
+     * @return
+     */
     public User setName(String name) {
         this.name = name;
         return this;
     }
         
+    /**
+     *
+     * @return
+     */
     public String getSurname() {
         return surname;
     }
 
+    /**
+     *
+     * @param surname
+     * @return
+     */
     public User setSurname(String surname) {
         this.surname = surname;
         return this;
     }
     
+    /**
+     *
+     * @return
+     */
     public String getMail() {
         return mail;
     }
@@ -112,6 +143,11 @@ public class User {
         return password;
     }
 
+    /**
+     *
+     * @param password
+     * @return
+     */
     public User setPassword(String password) {
         this.password = password;
         return this;

@@ -13,6 +13,10 @@ import org.springframework.context.annotation.Configuration;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
+/**
+ *
+ * @author unzalu.jon
+ */
 @Configuration
 public class SpringConfiguration {
 

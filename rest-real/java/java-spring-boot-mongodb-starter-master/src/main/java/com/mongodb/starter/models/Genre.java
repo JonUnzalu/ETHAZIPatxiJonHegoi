@@ -23,6 +23,10 @@ public class Genre {
     private int genreNum;
     private String name;
 
+    /**
+     *
+     * @return
+     */
     public ObjectId getId() {
         return id;
     }
@@ -37,10 +41,19 @@ public class Genre {
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getGenreNum() {
         return genreNum;
     }
 
+    /**
+     *
+     * @param genreNum
+     * @return
+     */
     public Genre setGenreNum(int genreNum) {
         this.genreNum = genreNum;
         return this;
@@ -64,6 +77,10 @@ public class Genre {
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Genre{" + "id=" + id + ", genreNum=" + genreNum + ", name=" + name + '}';
@@ -85,6 +102,10 @@ public class Genre {
         return genreNum == genre.genreNum && Objects.equals(name, genre.name);
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         return Objects.hash(id, genreNum, name);
