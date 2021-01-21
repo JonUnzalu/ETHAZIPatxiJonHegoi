@@ -52,6 +52,7 @@ namespace BooksProiektua.Controllers
 
         public ActionResult InsertForm()
         {
+
             return View();
         }
 
@@ -60,8 +61,8 @@ namespace BooksProiektua.Controllers
             using (var client = new HttpClient())
             {
                 Book book = new Book();
-                if (!collection["num"].Equals("") && int.TryParse(collection["num"], out int num)
-                    && !collection["author"].Equals("") &&
+                if (!collection["num"].Equals("") && int.TryParse(collection["num"], out int num) &&
+                    !collection["author"].Equals("") &&
                     !collection["country"].Equals("") &&
                     !collection["imageLink"].Equals("") &&
                     !collection["language"].Equals("") &&
@@ -98,7 +99,8 @@ namespace BooksProiektua.Controllers
                 }
                 else
                 {
-                    return View();
+                    ViewBag.Message = "a";
+                    return RedirectToAction("../Home/Insert");
                 }
 
             }
