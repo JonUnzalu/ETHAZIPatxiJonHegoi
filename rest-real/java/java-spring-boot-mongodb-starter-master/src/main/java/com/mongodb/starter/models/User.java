@@ -13,7 +13,7 @@ import org.bson.types.ObjectId;
 
 /**
  *
- * @author unzalu.jon
+ * This is the model for user
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class User {
@@ -29,7 +29,7 @@ public class User {
     
     /**
      *
-     * @return
+     * This is the getter of id
      */
     public ObjectId getId() {
         return id;
@@ -37,8 +37,8 @@ public class User {
 
     /**
      *
-     * @param id
-     * @return
+     * This is the setter of id
+     * 
      */
     public User setId(ObjectId id) {
         this.id = id;
@@ -47,7 +47,7 @@ public class User {
     
     /**
      *
-     * @return
+     * This is the getter of num
      */
     public int getNum() {
         return num;
@@ -55,8 +55,8 @@ public class User {
 
     /**
      *
-     * @param num
-     * @return
+     * This is the setter of num
+     *
      */
     public User setNum(int num) {
         this.num = num;
@@ -65,7 +65,7 @@ public class User {
     
     /**
      *
-     * @return
+     * This is the getter of username
      */
     public String getUsername() {
         return username;
@@ -73,8 +73,8 @@ public class User {
 
     /**
      *
-     * @param username
-     * @return
+     * This is the setter of username
+     *
      */
     public User setUsername(String username) {
         this.username = username;
@@ -83,7 +83,7 @@ public class User {
     
     /**
      *
-     * @return
+     * This is the getter of name
      */
     public String getName() {
         return name;
@@ -91,8 +91,8 @@ public class User {
 
     /**
      *
-     * @param name
-     * @return
+     * This is the setter of name
+     *
      */
     public User setName(String name) {
         this.name = name;
@@ -101,7 +101,7 @@ public class User {
         
     /**
      *
-     * @return
+     * This is the getter of surname
      */
     public String getSurname() {
         return surname;
@@ -109,8 +109,8 @@ public class User {
 
     /**
      *
-     * @param surname
-     * @return
+     * This is the setter of surname
+     *
      */
     public User setSurname(String surname) {
         this.surname = surname;
@@ -119,7 +119,7 @@ public class User {
     
     /**
      *
-     * @return
+     * This is the getter of email
      */
     public String getMail() {
         return mail;
@@ -127,8 +127,8 @@ public class User {
 
     /**
      *
-     * @param mail
-     * @return
+     * This is the setter of email
+     *
      */
     public User setMail(String mail) {
         this.mail = mail;
@@ -137,7 +137,7 @@ public class User {
     
     /**
      *
-     * @return
+     * This is the getter of password
      */
     public String getPassword() {
         return password;
@@ -145,8 +145,8 @@ public class User {
 
     /**
      *
-     * @param password
-     * @return
+     * This is the setter of password
+     * 
      */
     public User setPassword(String password) {
         this.password = password;
@@ -155,8 +155,8 @@ public class User {
     
     /**
      *
-     * @param o
-     * @return
+     * This is the equals
+     *
      */
     @Override
     public boolean equals(Object o) {
@@ -171,7 +171,7 @@ public class User {
     
     /**
      *
-     * @return
+     * This is the hashcode of this model
      */
     @Override
     public int hashCode() {

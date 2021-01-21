@@ -13,7 +13,7 @@ import org.bson.types.ObjectId;
 
 /**
  *
- * @author unzalu.jon
+ * This is the method of genre
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Genre {
@@ -25,7 +25,7 @@ public class Genre {
 
     /**
      *
-     * @return
+     * This is the getter of id
      */
     public ObjectId getId() {
         return id;
@@ -33,8 +33,8 @@ public class Genre {
 
     /**
      *
-     * @param id
-     * @return
+     * This is the setter of id
+     *
      */
     public Genre setId(ObjectId id) {
         this.id = id;
@@ -43,7 +43,7 @@ public class Genre {
 
     /**
      *
-     * @return
+     * This is the getter of genre
      */
     public int getGenreNum() {
         return genreNum;
@@ -51,8 +51,8 @@ public class Genre {
 
     /**
      *
-     * @param genreNum
-     * @return
+     * This is the setter of genre
+     *
      */
     public Genre setGenreNum(int genreNum) {
         this.genreNum = genreNum;
@@ -61,7 +61,7 @@ public class Genre {
 
     /**
      *
-     * @return
+     * This is the getter of name
      */
     public String getName() {
         return name;
@@ -69,8 +69,8 @@ public class Genre {
 
     /**
      *
-     * @param name
-     * @return
+     * This is the setter of name
+     *
      */
     public Genre setName(String name) {
         this.name = name;
@@ -79,7 +79,7 @@ public class Genre {
 
     /**
      *
-     * @return
+     * This is the toString method of this model
      */
     @Override
     public String toString() {
@@ -88,8 +88,8 @@ public class Genre {
     
     /**
      *
-     * @param o
-     * @return
+     * This is the equals
+     *
      */
     @Override
     public boolean equals(Object o) {
@@ -104,7 +104,7 @@ public class Genre {
     
     /**
      *
-     * @return
+     * This is the hashCode of this model
      */
     @Override
     public int hashCode() {

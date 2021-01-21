@@ -16,7 +16,7 @@ import org.bson.types.ObjectId;
 
 /**
  *
- * This is the class for Book
+ * This is the model for Book
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Book {
@@ -35,7 +35,7 @@ public class Book {
 
     /**
      *
-     * @return
+     * This is the getter of id
      */
     public ObjectId getId() {
         return id;
@@ -43,8 +43,8 @@ public class Book {
 
     /**
      *
-     * @param id
-     * @return
+     * This is the setter of id
+     *
      */
     public Book setId(ObjectId id) {
         this.id = id;
@@ -53,7 +53,7 @@ public class Book {
     
     /**
      *
-     * @return
+     * This is the getter of num
      */
     public int getNum() {
         return num;
@@ -61,8 +61,8 @@ public class Book {
 
     /**
      *
-     * @param num
-     * @return
+     * This is the setter of num
+     *
      */
     public Book setNum(int num) {
         this.num = num;
@@ -71,7 +71,7 @@ public class Book {
     
     /**
      *
-     * @return
+     * This is the getter of author
      */
     public String getAuthor() {
         return author;
@@ -79,8 +79,8 @@ public class Book {
 
     /**
      *
-     * @param author
-     * @return
+     * This is the setter of author
+     *
      */
     public Book setAuthor(String author) {
         this.author = author;
@@ -89,7 +89,7 @@ public class Book {
 
     /**
      *
-     * @return
+     * This is the getter of country
      */
     public String getCountry() {
         return country;
@@ -97,8 +97,8 @@ public class Book {
 
     /**
      *
-     * @param country
-     * @return
+     *This is the setter of country
+     *
      */
     public Book setCountry(String country) {
         this.country = country;
@@ -107,7 +107,7 @@ public class Book {
 
     /**
      *
-     * @return
+     * This is the getter of imageLink
      */
     public String getImageLink() {
         return imageLink;
@@ -115,8 +115,8 @@ public class Book {
 
     /**
      *
-     * @param imageLink
-     * @return
+     * This is the setter of imageLink
+     *
      */
     public Book setImageLink(String imageLink) {
         this.imageLink = imageLink;
@@ -125,7 +125,7 @@ public class Book {
 
     /**
      *
-     * @return
+     * This is the getter of language
      */
     public String getLanguage() {
         return language;
@@ -133,8 +133,8 @@ public class Book {
 
     /**
      *
-     * @param language
-     * @return
+     * This is the getter of language
+     *
      */
     public Book setLanguage(String language) {
         this.language = language;
@@ -143,7 +143,7 @@ public class Book {
 
     /**
      *
-     * @return
+     * This is the getter of link
      */
     public String getLink() {
         return link;
@@ -151,8 +151,8 @@ public class Book {
 
     /**
      *
-     * @param link
-     * @return
+     * This is the setter of link
+     *
      */
     public Book setLink(String link) {
         this.link = link;
@@ -161,7 +161,7 @@ public class Book {
 
     /**
      *
-     * @return
+     * This is the getter of pages
      */
     public int getPages() {
         return pages;
@@ -169,8 +169,8 @@ public class Book {
 
     /**
      *
-     * @param pages
-     * @return
+     * This is the setter of pages
+     *
      */
     public Book setPages(int pages) {
         this.pages = pages;
@@ -179,7 +179,7 @@ public class Book {
 
     /**
      *
-     * @return
+     * This is the getter of title
      */
     public String getTitle() {
         return title;
@@ -187,8 +187,8 @@ public class Book {
 
     /**
      *
-     * @param title
-     * @return
+     * This is the setter of title
+     *
      */
     public Book setTitle(String title) {
         this.title = title;
@@ -197,7 +197,7 @@ public class Book {
 
     /**
      *
-     * @return
+     * This is the getter of year
      */
     public int getYear() {
         return year;
@@ -205,8 +205,8 @@ public class Book {
 
     /**
      *
-     * @param year
-     * @return
+     * This is the setter of year
+     *
      */
     public Book setYear(int year) {
         this.year = year;
@@ -215,7 +215,7 @@ public class Book {
 
     /**
      *
-     * @return
+     * This is the toString method of this model
      */
     @Override
     public String toString() {
@@ -224,8 +224,8 @@ public class Book {
 
     /**
      *
-     * @param o
-     * @return
+     * This is the equals
+     *
      */
     @Override
     public boolean equals(Object o) {
@@ -241,7 +241,7 @@ public class Book {
     
     /**
      *
-     * @return
+     * This is the hashCode
      */
     @Override
     public int hashCode() {
