@@ -39,6 +39,11 @@ public class BookController {
         this.bookRepository = bookRepository;
     }
 
+    /**
+     *
+     * @param book
+     * @return
+     */
     @PostMapping("book")
     @ResponseStatus(HttpStatus.CREATED)
     public Book postBook(@RequestBody Book book) {
@@ -51,11 +56,20 @@ public class BookController {
         return bookRepository.saveAll(books);
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("books")
     public List<Book> getBooks() {
         return bookRepository.findAll();
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @GetMapping("book/{id}")
     public ResponseEntity<Book> getBook(@PathVariable String id) {
         Book book = bookRepository.findOne(id);
@@ -78,6 +92,10 @@ public class BookController {
         return bookRepository.findAll(listIds);
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("books/count")
     public Long getCount() {
         return bookRepository.count();
@@ -88,27 +106,51 @@ public class BookController {
         return bookRepository.delete(id);
     }
     
+    /**
+     *
+     * @param num
+     * @return
+     */
     @DeleteMapping("book/delete/{num}")
     public Long deleteBookByNum(@PathVariable int num) {
         return bookRepository.deleteOneNum(num);
     }
 
+    /**
+     *
+     * @param ids
+     * @return
+     */
     @DeleteMapping("books/{ids}")
     public Long deleteBooks(@PathVariable String ids) {
         List<String> listIds = asList(ids.split(","));
         return bookRepository.delete(listIds);
     } 
 
+    /**
+     *
+     * @return
+     */
     @DeleteMapping("books")
     public Long deleteBooks() {
         return null;// bookRepository.deleteAll();
     }
 
+    /**
+     *
+     * @param book
+     * @return
+     */
     @PutMapping("book")
     public Book putBook(@RequestBody Book book) {
         return bookRepository.update(book);
     }
 
+    /**
+     *
+     * @param books
+     * @return
+     */
     @PutMapping("books")
     public Long putBook(@RequestBody List<Book> books) {
         return bookRepository.update(books);
@@ -119,6 +161,11 @@ public class BookController {
         return bookRepository.getAveragePages();
     }
 
+    /**
+     *
+     * @param e
+     * @return
+     */
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public final Exception handleAllExceptions(RuntimeException e) {

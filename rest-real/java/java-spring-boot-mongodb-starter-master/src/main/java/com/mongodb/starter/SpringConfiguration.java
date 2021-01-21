@@ -19,6 +19,10 @@ public class SpringConfiguration {
     @Value("${spring.data.mongodb.uri}")
     private String connectionString;
 
+    /**
+     *
+     * @return
+     */
     @Bean
     public MongoClient mongoClient() {
         CodecRegistry pojoCodecRegistry = fromProviders(PojoCodecProvider.builder().automatic(true).build());

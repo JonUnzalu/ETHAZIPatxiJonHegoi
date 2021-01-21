@@ -26,6 +26,11 @@ public interface UserRepository {
 
     User findOne(String id);
     
+    /**
+     *
+     * @param num
+     * @return
+     */
     User findOneNum(int num);
 
     long count();

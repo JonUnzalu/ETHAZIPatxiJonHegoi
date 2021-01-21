@@ -15,14 +15,27 @@ public class AveragePageBOOK {
     
     private double averagePages;
 
+    /**
+     *
+     * @return
+     */
     public double getAveragePages() {
         return averagePages;
     }
 
+    /**
+     *
+     * @param averagePages
+     */
     public void setAveragePages(double averagePages) {
         this.averagePages = averagePages;
     }
 
+    /**
+     *
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -33,6 +46,10 @@ public class AveragePageBOOK {
         return Double.compare(that.averagePages, averagePages) == 0;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         return Objects.hash(averagePages);

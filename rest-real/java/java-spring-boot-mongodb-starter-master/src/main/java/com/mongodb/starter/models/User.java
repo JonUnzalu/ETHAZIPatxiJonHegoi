@@ -27,10 +27,19 @@ public class User {
     private String mail;
     private String password;
     
+    /**
+     *
+     * @return
+     */
     public ObjectId getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     public User setId(ObjectId id) {
         this.id = id;
         return this;
@@ -40,6 +49,11 @@ public class User {
         return num;
     }
 
+    /**
+     *
+     * @param num
+     * @return
+     */
     public User setNum(int num) {
         this.num = num;
         return this;
@@ -54,6 +68,10 @@ public class User {
         return this;
     }
     
+    /**
+     *
+     * @return
+     */
     public String getName() {
         return name;
     }
@@ -76,11 +94,20 @@ public class User {
         return mail;
     }
 
+    /**
+     *
+     * @param mail
+     * @return
+     */
     public User setMail(String mail) {
         this.mail = mail;
         return this;
     }
     
+    /**
+     *
+     * @return
+     */
     public String getPassword() {
         return password;
     }
@@ -90,6 +117,11 @@ public class User {
         return this;
     }
     
+    /**
+     *
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -101,6 +133,10 @@ public class User {
                 Objects.equals(mail, user.mail) && Objects.equals(password, user.password);
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         return Objects.hash(id, num, username, name, surname, mail, password);

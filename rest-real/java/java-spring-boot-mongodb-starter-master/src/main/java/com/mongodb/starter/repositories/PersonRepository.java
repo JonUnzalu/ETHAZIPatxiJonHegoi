@@ -15,6 +15,11 @@ public interface PersonRepository {
 
     List<Person> findAll();
 
+    /**
+     *
+     * @param ids
+     * @return
+     */
     List<Person> findAll(List<String> ids);
 
     Person findOne(String id);
@@ -23,12 +28,22 @@ public interface PersonRepository {
 
     long delete(String id);
 
+    /**
+     *
+     * @param ids
+     * @return
+     */
     long delete(List<String> ids);
 
     long deleteAll();
 
     Person update(Person person);
 
+    /**
+     *
+     * @param persons
+     * @return
+     */
     long update(List<Person> persons);
 
     double getAverageAge();

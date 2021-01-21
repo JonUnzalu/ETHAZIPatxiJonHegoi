@@ -27,6 +27,11 @@ public class Genre {
         return id;
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     public Genre setId(ObjectId id) {
         this.id = id;
         return this;
@@ -41,10 +46,19 @@ public class Genre {
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @param name
+     * @return
+     */
     public Genre setName(String name) {
         this.name = name;
         return this;
@@ -55,6 +69,11 @@ public class Genre {
         return "Genre{" + "id=" + id + ", genreNum=" + genreNum + ", name=" + name + '}';
     }
     
+    /**
+     *
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o)

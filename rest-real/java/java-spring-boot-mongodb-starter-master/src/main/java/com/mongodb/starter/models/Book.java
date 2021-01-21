@@ -60,6 +60,10 @@ public class Book {
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getCountry() {
         return country;
     }
@@ -100,6 +104,11 @@ public class Book {
         return pages;
     }
 
+    /**
+     *
+     * @param pages
+     * @return
+     */
     public Book setPages(int pages) {
         this.pages = pages;
         return this;
@@ -109,6 +118,11 @@ public class Book {
         return title;
     }
 
+    /**
+     *
+     * @param title
+     * @return
+     */
     public Book setTitle(String title) {
         this.title = title;
         return this;

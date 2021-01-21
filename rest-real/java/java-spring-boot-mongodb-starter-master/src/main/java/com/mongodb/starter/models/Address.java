@@ -9,6 +9,9 @@ public class Address {
     private String city;
     private String country;
 
+    /**
+     *
+     */
     public Address() {
     }
 
@@ -16,6 +19,11 @@ public class Address {
         return number;
     }
 
+    /**
+     *
+     * @param number
+     * @return
+     */
     public Address setNumber(int number) {
         this.number = number;
         return this;
@@ -74,6 +82,10 @@ public class Address {
                 .equals(city, address.city) && Objects.equals(country, address.country);
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         return Objects.hash(number, street, postcode, city, country);

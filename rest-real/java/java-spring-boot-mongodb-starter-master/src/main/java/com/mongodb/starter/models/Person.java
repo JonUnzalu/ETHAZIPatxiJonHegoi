@@ -10,6 +10,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ *
+ * @author unzalu.jon
+ */
 @JsonInclude(Include.NON_NULL)
 public class Person {
 
@@ -50,6 +54,10 @@ public class Person {
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getAge() {
         return age;
     }
@@ -63,6 +71,11 @@ public class Person {
         return address;
     }
 
+    /**
+     *
+     * @param address
+     * @return
+     */
     public Person setAddress(Address address) {
         this.address = address;
         return this;
@@ -72,6 +85,11 @@ public class Person {
         return createdAt;
     }
 
+    /**
+     *
+     * @param createdAt
+     * @return
+     */
     public Person setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -100,6 +118,11 @@ public class Person {
         return "Person{" + "id=" + id + ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", age=" + age + ", address=" + address + ", createdAt=" + createdAt + ", insurance=" + insurance + ", cars=" + cars + '}';
     }
 
+    /**
+     *
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o)

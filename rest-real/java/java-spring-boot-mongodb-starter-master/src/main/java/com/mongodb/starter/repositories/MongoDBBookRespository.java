@@ -103,16 +103,30 @@ public class MongoDBBookRespository implements BookRepository {
         return bookCollection.find(in("num", number)).first();
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @Override
     public Book findOne(String id) {
         return bookCollection.find(eq("_id", new ObjectId(id))).first();
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public long count() {
         return bookCollection.countDocuments();
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @Override
     public long delete(String id) {
         return bookCollection.deleteOne(eq("_id", new ObjectId(id))).getDeletedCount();
@@ -132,6 +146,10 @@ public class MongoDBBookRespository implements BookRepository {
         return bookCollection.deleteOne(eq("num", num)).getDeletedCount();  
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public long deleteAll() {
         try (ClientSession clientSession = client.startSession()) {
@@ -145,6 +163,11 @@ public class MongoDBBookRespository implements BookRepository {
         return bookCollection.findOneAndReplace(eq("_id", book.getId()), book, options);    
     }
 
+    /**
+     *
+     * @param books
+     * @return
+     */
     @Override
     public long update(List<Book> books) {
         List<WriteModel<Book>> writes = books.stream()

@@ -7,13 +7,25 @@ public class Car {
     private String model;
     private Float maxSpeedKmH;
 
+    /**
+     *
+     */
     public Car() {
     }
 
+    /**
+     *
+     * @return
+     */
     public String getBrand() {
         return brand;
     }
 
+    /**
+     *
+     * @param brand
+     * @return
+     */
     public Car setBrand(String brand) {
         this.brand = brand;
         return this;
@@ -28,6 +40,10 @@ public class Car {
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     public Float getMaxSpeedKmH() {
         return maxSpeedKmH;
     }
@@ -37,6 +53,10 @@ public class Car {
         return this;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Car{" + "brand='" + brand + '\'' + ", model='" + model + '\'' + ", maxSpeedKmH=" + maxSpeedKmH + '}';
@@ -53,6 +73,10 @@ public class Car {
                                                                                                       car.maxSpeedKmH);
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         return Objects.hash(brand, model, maxSpeedKmH);

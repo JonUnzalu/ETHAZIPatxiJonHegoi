@@ -33,6 +33,10 @@ import static com.mongodb.client.model.Projections.excludeId;
 import static com.mongodb.client.model.ReturnDocument.AFTER;
 import static java.util.Arrays.asList;
 
+/**
+ *
+ * @author unzalu.jon
+ */
 @Repository
 public class MongoDBPersonRepository implements PersonRepository {
 
@@ -68,6 +72,10 @@ public class MongoDBPersonRepository implements PersonRepository {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public List<Person> findAll() {
         return personCollection.find().into(new ArrayList<>());
@@ -83,11 +91,20 @@ public class MongoDBPersonRepository implements PersonRepository {
         return personCollection.find(eq("_id", new ObjectId(id))).first();
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public long count() {
         return personCollection.countDocuments();
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @Override
     public long delete(String id) {
         return personCollection.deleteOne(eq("_id", new ObjectId(id))).getDeletedCount();
@@ -102,6 +119,10 @@ public class MongoDBPersonRepository implements PersonRepository {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public long deleteAll() {
         try (ClientSession clientSession = client.startSession()) {

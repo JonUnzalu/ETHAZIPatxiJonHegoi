@@ -23,6 +23,11 @@ public class PersonController {
         this.personRepository = personRepository;
     }
 
+    /**
+     *
+     * @param person
+     * @return
+     */
     @PostMapping("person")
     @ResponseStatus(HttpStatus.CREATED)
     public Person postPerson(@RequestBody Person person) {
@@ -35,11 +40,20 @@ public class PersonController {
         return personRepository.saveAll(persons);
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("persons")
     public List<Person> getPersons() {
         return personRepository.findAll();
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @GetMapping("person/{id}")
     public ResponseEntity<Person> getPerson(@PathVariable String id) {
         Person person = personRepository.findOne(id);
@@ -54,6 +68,10 @@ public class PersonController {
         return personRepository.findAll(listIds);
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("persons/count")
     public Long getCount() {
         return personRepository.count();
@@ -90,6 +108,11 @@ public class PersonController {
         return personRepository.getAverageAge();
     }
 
+    /**
+     *
+     * @param e
+     * @return
+     */
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public final Exception handleAllExceptions(RuntimeException e) {

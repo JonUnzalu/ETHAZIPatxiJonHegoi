@@ -13,6 +13,11 @@ public interface BookRepository {
 
     List<Book> findAll();
 
+    /**
+     *
+     * @param ids
+     * @return
+     */
     List<Book> findAll(List<String> ids);
 
     Book findOne(String id);
@@ -21,8 +26,18 @@ public interface BookRepository {
 
     long count();
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     long delete(String id);
     
+    /**
+     *
+     * @param num
+     * @return
+     */
     long deleteOneNum(int num);
 
     long delete(List<String> _ids);
