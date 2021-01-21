@@ -15,7 +15,7 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
 /**
  *
- * @author unzalu.jon
+ * This class contains the method with the configuration to connect the project to MongoDb
  */
 @Configuration
 public class SpringConfiguration {
@@ -25,7 +25,7 @@ public class SpringConfiguration {
 
     /**
      *
-     * @return
+     * This method is the method that contains the configuration
      */
     @Bean
     public MongoClient mongoClient() {

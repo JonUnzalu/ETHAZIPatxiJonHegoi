@@ -14,11 +14,9 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-import static com.google.common.base.Predicates.not;
-
 /**
  *
- * @author unzalu.jon
+ * The class that idk para algo supongo que servirá
  */
 @Configuration
 @EnableSwagger2
@@ -26,7 +24,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 
     /**
      *
-     * @return
+     * Sip, definitivamente esto sirve para algo
      */
     @Bean
     public Docket api() {
@@ -36,7 +34,11 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                                                       .build()
                                                       .apiInfo(info());
     }
-
+    
+    /**
+     *
+     * Mucho texto
+     */
     private ApiInfo info() {
         return new ApiInfoBuilder().title("Quick start project")
                                    .description("Quick start project using Java, Spring boot and MongoDB")
@@ -50,7 +52,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 
     /**
      *
-     * @param registry
+     * Hace más cosas
      */
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -60,7 +62,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 
     /**
      *
-     * @param configurer
+     * Hace cosas
      */
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
