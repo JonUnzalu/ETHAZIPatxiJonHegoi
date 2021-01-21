@@ -52,7 +52,6 @@ namespace BooksProiektua.Controllers
 
         public ActionResult InsertForm()
         {
-
             return View();
         }
 
@@ -61,46 +60,51 @@ namespace BooksProiektua.Controllers
             using (var client = new HttpClient())
             {
                 Book book = new Book();
-                if (!collection["num"].Equals("") && int.TryParse(collection["num"], out int num) &&
+                if (!collection["num"].Equals("") && 
                     !collection["author"].Equals("") &&
                     !collection["country"].Equals("") &&
                     !collection["imageLink"].Equals("") &&
                     !collection["language"].Equals("") &&
                     !collection["link"].Equals("") &&
-                    !collection["pages"].Equals("") && int.TryParse(collection["pages"], out int pages) &&
+                    !collection["pages"].Equals("") && 
                     !collection["title"].Equals("") &&
-                    !collection["year"].Equals("") && int.TryParse(collection["year"], out int year))
+                    !collection["year"].Equals(""))
                 {
-                    
-                    book.num = int.Parse(collection["num"]);
-                    book.author = collection["author"];
-                    book.country = collection["country"];
-                    book.imageLink = collection["imageLink"];
-                    book.language = collection["language"];
-                    book.link = collection["link"];
-                    book.pages = int.Parse(collection["pages"]);
-                    book.title = collection["title"];
-                    book.year = int.Parse(collection["year"]);
+                    if (int.TryParse(collection["num"], out int num) && int.TryParse(collection["pages"], out int pages) && int.TryParse(collection["year"], out int year))
+                    {
+                        book.num = int.Parse(collection["num"]);
+                        book.author = collection["author"];
+                        book.country = collection["country"];
+                        book.imageLink = collection["imageLink"];
+                        book.language = collection["language"];
+                        book.link = collection["link"];
+                        book.pages = int.Parse(collection["pages"]);
+                        book.title = collection["title"];
+                        book.year = int.Parse(collection["year"]);
 
 
 
-                    //Passing service base url  
-                    client.BaseAddress = new Uri(Baseurl);
+                        //Passing service base url  
+                        client.BaseAddress = new Uri(Baseurl);
 
-                    client.DefaultRequestHeaders.Clear();
-                    //Define request data format  
-                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                        client.DefaultRequestHeaders.Clear();
+                        //Define request data format  
+                        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                    //Sending request to find web api REST service resource GetAllEmployees using HttpClient
-                    await client.PostAsJsonAsync<Book>("api/book/", book);
+                        //Sending request to find web api REST service resource GetAllEmployees using HttpClient
+                        await client.PostAsJsonAsync<Book>("api/book/", book);
 
-                    //returning the employee list to view  
-                    return RedirectToAction("../Home/Select");
+                        //returning the employee list to view  
+                        return RedirectToAction("../Home/Select");
+                    }
+                    else
+                    {
+                        return RedirectToAction("../Home/InsertForm");
+                    }
                 }
                 else
                 {
-                    ViewBag.Message = "a";
-                    return RedirectToAction("../Home/Insert");
+                    return RedirectToAction("../Home/InsertForm");
                 }
 
             }
