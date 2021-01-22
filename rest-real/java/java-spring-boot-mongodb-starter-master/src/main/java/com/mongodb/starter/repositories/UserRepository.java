@@ -86,9 +86,9 @@ public interface UserRepository {
 
     /**
      *
-     * @param book
+     * @param user
      * @return
      */
-    Book update(Book book);
+    User update(User user);
 
 }
