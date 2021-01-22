@@ -37,7 +37,7 @@ public class BookController {
 
     /**
      *
-     * This is the constructor, I guess, I hope so
+     * This is the default constructor, it initializes the bookRepository
      */
     public BookController(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
