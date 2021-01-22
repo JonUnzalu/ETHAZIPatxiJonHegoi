@@ -5,8 +5,25 @@
  */
 package com.mongodb.starter.repositories;
 
+import com.mongodb.ReadConcern;
+import com.mongodb.ReadPreference;
+import com.mongodb.TransactionOptions;
+import com.mongodb.WriteConcern;
+import com.mongodb.client.ClientSession;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoCollection;
+import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Filters.in;
+import com.mongodb.client.model.FindOneAndReplaceOptions;
+import static com.mongodb.client.model.ReturnDocument.AFTER;
+import com.mongodb.starter.models.Book;
 import com.mongodb.starter.models.User;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import javax.annotation.PostConstruct;
+import org.bson.types.ObjectId;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -16,19 +33,43 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MongoDBUserRepository implements UserRepository{
 
+    private static final TransactionOptions txnOptions = TransactionOptions.builder()
+                                                                           .readPreference(ReadPreference.primary())
+                                                                           .readConcern(ReadConcern.MAJORITY)
+                                                                           .writeConcern(WriteConcern.MAJORITY)
+                                                                           .build();
+    
+    
+    @Autowired
+    private MongoClient client;
+    private MongoCollection<User> userCollection;
+    
+    @PostConstruct
+    void init() {
+        userCollection = client.getDatabase("test").getCollection("users", User.class);
+    }
+    
     @Override
     public User save(User user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        user.setId(new ObjectId());
+        userCollection.insertOne(user);
+        return user;
     }
 
     @Override
     public List<User> saveAll(List<User> users) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try (ClientSession clientSession = client.startSession()) {
+            return clientSession.withTransaction(() -> {
+                users.forEach(p -> p.setId(new ObjectId()));
+                userCollection.insertMany(clientSession, users);
+                return users;
+            }, txnOptions);
+        }
     }
 
     @Override
     public List<User> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return userCollection.find().into(new ArrayList<>());
     }
 
     @Override
@@ -42,13 +83,13 @@ public class MongoDBUserRepository implements UserRepository{
     }
 
     @Override
-    public User findOneNum(int num) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public User findOneNum(int number) {
+        return userCollection.find(in("num", number)).first();
     }
 
     @Override
     public long count() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return userCollection.countDocuments();
     }
 
     @Override
@@ -58,7 +99,7 @@ public class MongoDBUserRepository implements UserRepository{
 
     @Override
     public long deleteOneUser(int num) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return userCollection.deleteOne(eq("num", num)).getDeletedCount();  
     }
 
     @Override
@@ -68,7 +109,12 @@ public class MongoDBUserRepository implements UserRepository{
 
     @Override
     public User update(User user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
+        return userCollection.findOneAndReplace(eq("num", user.getNum()) , user, options);
+    }
+    
+    private List<ObjectId> mapToObjectIds(List<String> ids) {
+        return ids.stream().map(ObjectId::new).collect(Collectors.toList());
     }
     
 }
