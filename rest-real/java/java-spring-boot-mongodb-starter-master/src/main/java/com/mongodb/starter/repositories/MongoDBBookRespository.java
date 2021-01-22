@@ -186,7 +186,7 @@ public class MongoDBBookRespository implements BookRepository {
     @Override
     public Book update(Book book) {
         FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
-        return bookCollection.findOneAndReplace(eq("_id", book.getId()), book, options);    
+        return bookCollection.findOneAndReplace(eq("num", book.getNum()), book, options);    
     }
 
     /**
