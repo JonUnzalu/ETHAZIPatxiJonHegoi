@@ -60,8 +60,8 @@ namespace BooksProiektua.Controllers
             using (var client = new HttpClient())
             {
                 Book book = new Book();
-                if (!collection["num"].Equals("") && 
-                    !collection["author"].Equals("") &&
+                List<Book> BookInfo = new List<Book>();
+                if (!collection["author"].Equals("") &&
                     !collection["country"].Equals("") &&
                     !collection["imageLink"].Equals("") &&
                     !collection["language"].Equals("") &&
@@ -70,9 +70,8 @@ namespace BooksProiektua.Controllers
                     !collection["title"].Equals("") &&
                     !collection["year"].Equals(""))
                 {
-                    if (int.TryParse(collection["num"], out int num) && int.TryParse(collection["pages"], out int pages) && int.TryParse(collection["year"], out int year))
+                    if (int.TryParse(collection["pages"], out int pages) && int.TryParse(collection["year"], out int year))
                     {
-                        book.num = int.Parse(collection["num"]);
                         book.author = collection["author"];
                         book.country = collection["country"];
                         book.imageLink = collection["imageLink"];
@@ -91,7 +90,29 @@ namespace BooksProiektua.Controllers
                         //Define request data format  
                         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                        //Sending request to find web api REST service resource GetAllEmployees using HttpClient
+                        HttpResponseMessage Res = await client.GetAsync("api/books");
+
+                        //Checking the response is successful or not which is sent using HttpClient  
+                        if (Res.IsSuccessStatusCode)
+                        {
+                            //Storing the response details recieved from web api   
+                            var BookResponse = Res.Content.ReadAsStringAsync().Result;
+
+                            //Deserializing the response recieved from web api and storing into the Employee list  
+                            BookInfo = JsonConvert.DeserializeObject<List<Book>>(BookResponse);
+
+                        }
+                        int max = 0;
+                        foreach (Book x in BookInfo)
+                        {
+                            if(x.num > max)
+                            {
+                                max = x.num;
+                            }
+                        }
+
+                        book.num = max + 1;
+
                         await client.PostAsJsonAsync<Book>("api/book/", book);
 
                         //returning the employee list to view  
