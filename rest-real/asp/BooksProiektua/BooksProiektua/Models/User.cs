@@ -13,6 +13,7 @@ namespace BooksProiektua.Models
         public String surname { get; set; }
         public String mail { get; set; }
         public String password { get; set; }
+        public Boolean admin { get; set; }
 
         public String toString()
         {
