@@ -16,7 +16,6 @@ import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Filters.in;
 import com.mongodb.client.model.FindOneAndReplaceOptions;
 import static com.mongodb.client.model.ReturnDocument.AFTER;
-import com.mongodb.starter.models.Book;
 import com.mongodb.starter.models.User;
 import java.util.ArrayList;
 import java.util.List;
