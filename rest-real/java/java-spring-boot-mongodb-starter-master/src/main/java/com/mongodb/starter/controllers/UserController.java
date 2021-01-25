@@ -14,10 +14,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -98,7 +100,35 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
     
-
+    /**
+     *
+     * A method to get the amount of users stored
+     */
+    @GetMapping("users/count")
+    public Long getCount() {
+        return userRepository.count();
+    }
+    
+    /**
+     *
+     * A method to delete a single user using the num as a variable
+     * 
+     */
+    @DeleteMapping("user/delete/{num}")
+    public Long deleteUserByNum(@PathVariable int num) {
+        return userRepository.deleteOneUser(num);
+    }
+    
+    /**
+     *
+     * A method to update an existing user
+     * 
+     */
+    @PutMapping("user")
+    public User putUser(@RequestBody User user) {
+        return userRepository.update(user);
+    }
+    
     /**
      *
      *A method to hanlde all the exceptions

@@ -5,7 +5,6 @@
  */
 package com.mongodb.starter.repositories;
 
-import com.mongodb.starter.models.Book;
 import com.mongodb.starter.models.User;
 import java.util.List;
 import org.springframework.stereotype.Repository;

@@ -26,6 +26,7 @@ public class User {
     private String surname;
     private String mail;
     private String password;
+    private boolean admin;
     
     /**
      *
@@ -152,6 +153,26 @@ public class User {
         this.password = password;
         return this;
     }
+
+    /**
+     *
+     * This is the getter of admin
+     */
+    public boolean isAdmin() {
+        return admin;
+    }
+
+    /**
+     *
+     * This is the setter of admin
+     * 
+     */
+    public User setAdmin(boolean admin) {
+        this.admin = admin;
+        return this;
+    }
+    
+    
     
     /**
      *
@@ -165,7 +186,7 @@ public class User {
         if (o == null || getClass() != o.getClass())
             return false;
         User user = (User) o;
-        return num == user.num && Objects.equals(username, user.username) && Objects.equals(name, user.name) && Objects.equals(surname, user.surname) && 
+        return num == user.num && admin == user.admin && Objects.equals(username, user.username) && Objects.equals(name, user.name) && Objects.equals(surname, user.surname) && 
                 Objects.equals(mail, user.mail) && Objects.equals(password, user.password);
     }
     
@@ -175,7 +196,7 @@ public class User {
      */
     @Override
     public int hashCode() {
-        return Objects.hash(id, num, username, name, surname, mail, password);
+        return Objects.hash(id, num, username, name, surname, mail, password, admin);
     }
     
 }
