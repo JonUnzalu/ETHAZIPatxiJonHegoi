@@ -181,7 +181,6 @@ namespace BooksProiektua.Controllers
 
             }
         }
-<<<<<<< HEAD
 
         /*public async Task<ActionResult> Login(FormCollection collection)
         {
@@ -202,7 +201,5 @@ namespace BooksProiektua.Controllers
         {
             return View();
         }
-=======
->>>>>>> parent of 6438f06... eso
     }
 }
