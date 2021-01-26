@@ -151,5 +151,25 @@ namespace BooksProiektua.Controllers
 
             }
         }
+
+        /*public async Task<ActionResult> Login(FormCollection collection)
+        {
+
+        }*/
+
+        public ActionResult LoginForm()
+        {
+            return View();
+        }
+
+        /*public async Task<ActionResult> Register(FormCollection collection)
+        {
+
+        }*/
+
+        public ActionResult RegisterForm()
+        {
+            return View();
+        }
     }
 }
