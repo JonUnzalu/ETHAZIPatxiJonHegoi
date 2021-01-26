@@ -38,7 +38,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author unzalu.jon
+ * MongoDB repository
  */
 @Repository
 public class MongoDBBookRespository implements BookRepository {
@@ -59,8 +59,8 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * @param book
-     * @return
+     * Save one book
+     *
      */
     @Override
     public Book save(Book book) {
@@ -71,8 +71,8 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * @param books
-     * @return
+     * Save all books
+     *
      */
     @Override
     public List<Book> saveAll(List<Book> books) {
@@ -87,7 +87,7 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * @return
+     * Find all books
      */
     @Override
     public List<Book> findAll() {
@@ -96,8 +96,8 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * @param ids
-     * @return
+     * Find all books by id
+     *
      */
     @Override
     public List<Book> findAll(List<String> ids) {
@@ -106,8 +106,8 @@ public class MongoDBBookRespository implements BookRepository {
     
     /**
      *
-     * @param number
-     * @return
+     * Find one book by num
+     *
      */
     @Override
     public Book findOneNum(int number) {
@@ -116,8 +116,8 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * @param id
-     * @return
+     * Find one book by id
+     *
      */
     @Override
     public Book findOne(String id) {
@@ -126,7 +126,7 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * @return
+     * Count the number of books
      */
     @Override
     public long count() {
@@ -135,8 +135,8 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * @param id
-     * @return
+     * Delete all books by id
+     *
      */
     @Override
     public long delete(String id) {
@@ -145,8 +145,8 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * @param ids
-     * @return
+     * Delete one book by id
+     *
      */
     @Override
     public long delete(List<String> ids) {
@@ -159,8 +159,8 @@ public class MongoDBBookRespository implements BookRepository {
     
     /**
      *
-     * @param num
-     * @return
+     * Delete one book by num
+     *
      */
     @Override
     public long deleteOneNum(int num) {
@@ -169,7 +169,7 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * @return
+     * Delete all books
      */
     @Override
     public long deleteAll() {
@@ -180,8 +180,8 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * @param book
-     * @return
+     * Update book
+     *
      */
     @Override
     public Book update(Book book) {
@@ -191,8 +191,8 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * @param books
-     * @return
+     * Update books
+     *
      */
     @Override
     public long update(List<Book> books) {
@@ -206,7 +206,7 @@ public class MongoDBBookRespository implements BookRepository {
     
     /**
      *
-     * @return
+     * Average of pages for each book
      */
     @Override
     public double getAveragePages() {

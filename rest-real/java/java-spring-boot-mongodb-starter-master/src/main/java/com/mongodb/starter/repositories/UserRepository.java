@@ -11,82 +11,82 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author unzalu.jon
+ * User repositories
  */
 @Repository
 public interface UserRepository {
 
     /**
      *
-     * @param user
-     * @return
+     * User repository
+     *
      */
     User save(User user);
     
     /**
      *
-     * @param users
-     * @return
+     * Save one user
+     *
      */
     List<User> saveAll(List<User> users);
 
     /**
      *
-     * @return
+     * Save all users
      */
     List<User> findAll();
 
     /**
      *
-     * @param ids
-     * @return
+     * Find all users
+     *
      */
     List<User> findAll(List<User> ids);
 
     /**
      *
-     * @param id
-     * @return
+     * Find one user by id
+     *
      */
     User findOne(String id);
     
     /**
      *
-     * @param num
-     * @return
+     * Find one user by num
+     *
      */
     User findOneNum(int num);
 
     /**
      *
-     * @return
+     * Count the number of users
      */
     long count();
 
     /**
      *
-     * @param id
-     * @return
+     * Delete all users by id
+     *
      */
     long delete(String id);
     
     /**
      *
-     * @param num
-     * @return
+     * Delete one user by num
+     *
      */
     long deleteOneUser(int num);
 
     /**
      *
-     * @return
+     * Delete all users
      */
     long deleteAll();
 
     /**
      *
-     * @param user
-     * @return
+     * Update user
+     *
      */
     User update(User user);
 

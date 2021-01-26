@@ -6,102 +6,102 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author unzalu.jon
+ * This is the book repository
  */
 @Repository
 public interface BookRepository {
 
     /**
      *
-     * @param book
-     * @return
+     * Save one book
+     *
      */
     Book save(Book book);
     
     /**
      *
-     * @param books
-     * @return
+     * save all books
+     *
      */
     List<Book> saveAll(List<Book> books);
 
     /**
      *
-     * @return
+     * select all books
      */
     List<Book> findAll();
 
     /**
      *
-     * @param ids
-     * @return
+     * select all books by id
+     *
      */
     List<Book> findAll(List<String> ids);
 
     /**
      *
-     * @param id
-     * @return
+     * The id of the book
+     *
      */
     Book findOne(String id);
     
     /**
      *
-     * @param num
-     * @return
+     * The number of the book
+     *
      */
     Book findOneNum(int num);
 
     /**
      *
-     * @return
+     * Count how many books are 
      */
     long count();
 
     /**
      *
-     * @param id
-     * @return
+     * Delete books by the id of the book
+     *
      */
     long delete(String id);
     
     /**
      *
-     * @param num
-     * @return
+     * Delete one book by the num of the book
+     *
      */
     long deleteOneNum(int num);
 
     /**
      *
-     * @param _ids
-     * @return
+     * Delete book
+     *
      */
     long delete(List<String> _ids);
 
     /**
      *
-     * @return
+     * Delete all books
      */
     long deleteAll();
 
     /**
      *
-     * @param book
-     * @return
+     * Update one book
+     *
      */
     Book update(Book book);
 
     /**
      *
-     * @param books
-     * @return
+     * Update books
+     *
      */
     long update(List<Book> books);
 
     /**
      *
-     * @return
+     * Show the average of the pages for each book
      */
     double getAveragePages();
     
