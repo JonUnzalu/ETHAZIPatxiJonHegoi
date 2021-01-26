@@ -2,11 +2,12 @@
 @{
     ViewBag.Title = "Index";
 }
+<div class="main">
+    <h2>Index</h2>
 
-<h2>Index</h2>
+    <ul>
+        <li>@Html.ActionLink("Select", "Select")</li>
+        <li>@Html.ActionLink("Insert", "InsertForm")</li>
 
-<ul>
-    <li>@Html.ActionLink("Select", "Select")</li>
-    <li>@Html.ActionLink("Insert", "InsertForm")</li>
-
-</ul>
+    </ul>
+</div>
