@@ -50,6 +50,36 @@ namespace BooksProiektua.Controllers
             }
         }
 
+        public async Task<ActionResult> SelectOne()
+        {
+            Book BookInfo = new Book();
+            using (var client = new HttpClient())
+            {
+                //Passing service base url  
+                client.BaseAddress = new Uri(Baseurl);
+
+                client.DefaultRequestHeaders.Clear();
+                //Define request data format  
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
+                HttpResponseMessage Res = await client.GetAsync("api/book/num/5");
+
+                //Checking the response is successful or not which is sent using HttpClient  
+                if (Res.IsSuccessStatusCode)
+                {
+                    //Storing the response details recieved from web api   
+                    var BookResponse = Res.Content.ReadAsStringAsync().Result;
+
+                    //Deserializing the response recieved from web api and storing into the Employee list  
+                    BookInfo = JsonConvert.DeserializeObject<Book>(BookResponse);
+
+                }
+                //returning the employee list to view  
+                return View(BookInfo);
+            }
+        }
+
         public ActionResult InsertForm()
         {
             return View();

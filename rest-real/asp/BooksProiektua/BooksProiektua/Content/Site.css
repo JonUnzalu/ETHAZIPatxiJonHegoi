@@ -8,6 +8,10 @@
     color: black;
 }
 
+.oneBook{
+    background-color: grey;
+}
+
 .tableList{
     background-color: cyan;
     opacity: 0.7;
