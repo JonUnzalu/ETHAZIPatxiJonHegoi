@@ -161,5 +161,15 @@ namespace BooksProiektua.Controllers
         {
             return View();
         }
+
+        /*public async Task<ActionResult> Register(FormCollection collection)
+        {
+
+        }*/
+
+        public ActionResult RegisterForm()
+        {
+            return View();
+        }
     }
 }
