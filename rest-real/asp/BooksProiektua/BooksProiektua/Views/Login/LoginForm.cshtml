@@ -3,9 +3,10 @@
     ViewBag.Title = "Login";
 }
 <div class="divBg">
+
     <h2>Login</h2>
 
-    @using (Html.BeginForm("Login", "Home"))
+    @using (Html.BeginForm("Login", "Login"))
     {
 
         @Html.AntiForgeryToken()
@@ -36,5 +37,5 @@
             </div>
         </div>
     }
-
+    <a href="~/Login/RegisterForm">Don't have an account? Register now!</a>
 </div>
