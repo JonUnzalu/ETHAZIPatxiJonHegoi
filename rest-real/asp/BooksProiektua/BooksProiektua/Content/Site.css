@@ -1,6 +1,21 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url("/images/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black;
+}
+
+.tableList{
+    background-color: cyan;
+    opacity: 0.7;
+}
+
+.main {
+    border-radius: 15px;
+    background-color: cyan;
 }
 
 /* Set padding to keep content from hitting the edges */
