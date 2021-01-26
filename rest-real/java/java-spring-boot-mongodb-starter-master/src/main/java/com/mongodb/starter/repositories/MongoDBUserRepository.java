@@ -27,7 +27,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author unzalu.jon
+ * MongoDB repositories
  */
 @Repository
 public class MongoDBUserRepository implements UserRepository{
