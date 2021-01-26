@@ -87,6 +87,11 @@ public class MongoDBUserRepository implements UserRepository{
     }
 
     @Override
+    public User findOneUser(String name) {
+        return userCollection.find(eq("username", name)).first();
+    }
+    
+    @Override
     public long count() {
         return userCollection.countDocuments();
     }
@@ -115,5 +120,6 @@ public class MongoDBUserRepository implements UserRepository{
     private List<ObjectId> mapToObjectIds(List<String> ids) {
         return ids.stream().map(ObjectId::new).collect(Collectors.toList());
     }
+
     
 }

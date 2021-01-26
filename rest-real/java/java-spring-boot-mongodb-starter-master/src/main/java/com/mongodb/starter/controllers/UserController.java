@@ -102,6 +102,19 @@ public class UserController {
     
     /**
      *
+     * A method to get a single user using the name as the variable
+     * 
+     */
+    @GetMapping("user/name/{name}")
+    public ResponseEntity<User> getUserByName(@PathVariable String name) {
+        User user = userRepository.findOneUser(name);
+        if (user == null)
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        return ResponseEntity.ok(user);
+    }
+    
+    /**
+     *
      * A method to get the amount of users stored
      */
     @GetMapping("users/count")

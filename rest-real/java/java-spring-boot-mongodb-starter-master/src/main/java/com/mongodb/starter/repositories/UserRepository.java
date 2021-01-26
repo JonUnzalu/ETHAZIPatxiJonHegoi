@@ -59,6 +59,14 @@ public interface UserRepository {
 
     /**
      *
+     * Find one user by name
+     *
+     */
+    User findOneUser(String name);
+
+    
+    /**
+     *
      * Count the number of users
      */
     long count();
