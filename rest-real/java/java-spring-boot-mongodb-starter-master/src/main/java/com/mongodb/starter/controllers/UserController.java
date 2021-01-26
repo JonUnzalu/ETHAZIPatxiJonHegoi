@@ -107,7 +107,7 @@ public class UserController {
      */
     @GetMapping("user/name/{name}")
     public ResponseEntity<User> getUserByName(@PathVariable String name) {
-        User user = userRepository.findOneName(name);
+        User user = userRepository.findOneUser(name);
         if (user == null)
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         return ResponseEntity.ok(user);

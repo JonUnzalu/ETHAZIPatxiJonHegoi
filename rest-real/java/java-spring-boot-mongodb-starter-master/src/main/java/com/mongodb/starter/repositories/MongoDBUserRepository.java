@@ -87,8 +87,8 @@ public class MongoDBUserRepository implements UserRepository{
     }
 
     @Override
-    public User findOneName(String name) {
-        return userCollection.find(eq("name", name)).first();
+    public User findOneUser(String name) {
+        return userCollection.find(eq("username", name)).first();
     }
     
     @Override

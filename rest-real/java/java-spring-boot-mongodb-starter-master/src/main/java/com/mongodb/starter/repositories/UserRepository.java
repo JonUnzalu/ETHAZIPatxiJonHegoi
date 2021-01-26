@@ -62,7 +62,7 @@ public interface UserRepository {
      * Find one user by name
      *
      */
-    User findOneName(String name);
+    User findOneUser(String name);
 
     
     /**
