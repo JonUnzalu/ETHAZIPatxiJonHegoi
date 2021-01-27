@@ -92,6 +92,11 @@ public class MongoDBUserRepository implements UserRepository{
     }
     
     @Override
+    public User findOneUserPass(String password) {
+        return userCollection.find(eq("password", password)).first();
+    }
+    
+    @Override
     public long count() {
         return userCollection.countDocuments();
     }

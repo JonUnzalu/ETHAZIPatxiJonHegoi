@@ -115,6 +115,19 @@ public class UserController {
     
     /**
      *
+     * A method to get a single user using the password as the variable
+     * 
+     */
+    @GetMapping("user/pass/{password}")
+    public ResponseEntity<User> getUserByPassword(@PathVariable String password) {
+        User user = userRepository.findOneUserPass(password);
+        if (user == null)
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        return ResponseEntity.ok(user);
+    }
+    
+    /**
+     *
      * A method to get the amount of users stored
      */
     @GetMapping("users/count")

@@ -67,6 +67,13 @@ public interface UserRepository {
     
     /**
      *
+     * Find one password
+     *
+     */
+    User findOneUserPass(String password);
+    
+    /**
+     *
      * Count the number of users
      */
     long count();
