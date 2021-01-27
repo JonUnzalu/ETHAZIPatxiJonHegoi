@@ -20,7 +20,7 @@ namespace BooksProiektua.Controllers
         //Hosted web API REST Service base url  
         string Baseurl = "http://192.168.72.13:8080/";
 
-        public async Task<ActionResult> Select(int i = 0)
+        public async Task<ActionResult> Select(int i = 0, Boolean haundiegia = false)
         {
             List<Book> BookInfo = new List<Book>();
             List<Book> BookList = new List<Book>();
@@ -46,9 +46,13 @@ namespace BooksProiektua.Controllers
                     BookInfo = JsonConvert.DeserializeObject<List<Book>>(BookResponse);
 
                 }
-                for(int k = i; k < i + 10; k++)
+                for(int k = i; k < i + 10 && k < BookInfo.Count; k++)
                 {
                     BookList.Add(BookInfo[k]);
+                }
+                if (i + 10 > BookInfo.Count)
+                {
+                    haundiegia = true;
                 }
                 //returning the employee list to view  
                 return View(BookList);

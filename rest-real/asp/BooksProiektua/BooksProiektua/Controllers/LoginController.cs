@@ -11,20 +11,55 @@ namespace BooksProiektua.Controllers
 {
     public class LoginController : Controller
     {
-
+        //Hosted web API REST Service base url  
+        string Baseurl = "http://192.168.72.13:8080/";
 
         public ActionResult LoginForm()
         {
             return View();
         }
 
+        public async Task<ActionResult> Login(FormCollection collection)
+        {
+            User userInfo = new User();
+            using (var client = new HttpClient())
+            {
+                string username = collection["username"];
+                string password = collection["password"];
+                //Passing service base url
+                client.BaseAddress = new Uri(Baseurl);
+
+                client.DefaultRequestHeaders.Clear();
+                //Define request data format
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                //Sending request to find web api REST service resource GetAllEmployees using HttpClient
+                HttpResponseMessage Res = await client.GetAsync("api/user/name/" + username);
+                HttpResponseMessage Res2 = await client.GetAsync("api/user/pass/" + password);
+
+                //Checking the response is successful or not which is sent using HttpClient
+                if (Res.IsSuccessStatusCode && Res2.IsSuccessStatusCode)
+                {
+                    //Storing the response details recieved from web api
+                    var UserResponse = Res.Content.ReadAsStringAsync().Result;
+
+                    //Deserializing the response recieved from web api and storing into the Employee list
+                    userInfo = JsonConvert.DeserializeObject<User>(UserResponse);
+
+                    return RedirectToAction("../Home/Index");
+                }
+
+                else
+                {
+                    return RedirectToAction("../Login/LoginForm");
+                }
+            }
+        }
+
         public ActionResult RegisterForm()
         {
             return View();
         }
-
-        //Hosted web API REST Service base url  
-        string Baseurl = "http://192.168.72.13:8080/";
 
         public async Task<ActionResult> Register(FormCollection collection)
         {

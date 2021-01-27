@@ -17,8 +17,11 @@
 
     <table class="table table-dark table-striped">
         <div>
-            <h1>@Html.ActionLink("<", "Select", new { i = (int.Parse(Request.Params["i"]) - 10) })"
-            @Html.ActionLink(">", "Select", new { i = (int.Parse(Request.Params["i"]) + 10) })"</h1>
+            <h1>
+            @if (int.Parse(Request.Params["i"]) > 0) {
+            @Html.ActionLink("<", "Select", new { i = (int.Parse(Request.Params["i"]) - 10) })
+                    }
+            @Html.ActionLink(">", "Select", new { i = (int.Parse(Request.Params["i"]) + 10) })</h1>
         </div>
         <thead>
             <tr>
@@ -58,7 +61,12 @@
     </table>
     <div>
 
-        <h1>@Html.ActionLink("<", "Select", new { i = (int.Parse(Request.Params["i"]) - 10) })"
-        @Html.ActionLink(">", "Select", new { i = (int.Parse(Request.Params["i"]) + 10) })"</h1>
+        <h1>
+            @if (int.Parse(Request.Params["i"]) > 0)
+            {
+                @Html.ActionLink("<", "Select", new { i = (int.Parse(Request.Params["i"]) - 10) })
+            }
+            @Html.ActionLink(">", "Select", new { i = (int.Parse(Request.Params["i"]) + 10) })
+        </h1>
     </div>
 </body>
