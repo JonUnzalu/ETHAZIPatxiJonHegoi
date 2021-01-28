@@ -12,7 +12,7 @@ namespace BooksProiektua.Controllers
     public class LoginController : Controller
     {
         //Hosted web API REST Service base url  
-        string Baseurl = "http://192.168.72.13:8080/";
+        string Baseurl = "http://192.168.72.50:8080/";
 
         public ActionResult LoginForm()
         {
@@ -21,7 +21,8 @@ namespace BooksProiektua.Controllers
 
         public async Task<ActionResult> Login(FormCollection collection)
         {
-            User userInfo = new User();
+            List<User> userInfo = new List<User>();
+            Boolean found = false;
             using (var client = new HttpClient())
             {
                 string username = collection["username"];
@@ -34,19 +35,42 @@ namespace BooksProiektua.Controllers
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 //Sending request to find web api REST service resource GetAllEmployees using HttpClient
-                HttpResponseMessage Res = await client.GetAsync("api/user/name/" + username);
-                HttpResponseMessage Res2 = await client.GetAsync("api/user/pass/" + password);
+                HttpResponseMessage Res = await client.GetAsync("api/users");
 
                 //Checking the response is successful or not which is sent using HttpClient
-                if (Res.IsSuccessStatusCode && Res2.IsSuccessStatusCode)
+                if (Res.IsSuccessStatusCode)
                 {
-                    //Storing the response details recieved from web api
+                    //Storing the response details recieved from web api   
                     var UserResponse = Res.Content.ReadAsStringAsync().Result;
 
-                    //Deserializing the response recieved from web api and storing into the Employee list
-                    userInfo = JsonConvert.DeserializeObject<User>(UserResponse);
+                    //Deserializing the response recieved from web api and storing into the Employee list  
+                    userInfo = JsonConvert.DeserializeObject<List<User>>(UserResponse);
 
-                    return RedirectToAction("../Home/Index");
+                    int i = 0;
+                    while (!found && i < userInfo.Count)
+                    {
+                        if (userInfo[i].username == username)
+                        {
+                            if (userInfo[i].password == password)
+                            {
+                                found = true;
+                            }
+                        }
+                        else
+                        {
+                            i++;
+                        }
+                    }
+                    if (found)
+                    {
+                        return RedirectToAction("../Home/Index");
+                    }
+                    else
+                    {
+                        return RedirectToAction("../Login/LoginForm");
+                    }
+
+
                 }
 
                 else

@@ -18,9 +18,9 @@ namespace BooksProiektua.Controllers
         }
 
         //Hosted web API REST Service base url  
-        string Baseurl = "http://192.168.72.13:8080/";
+        string Baseurl = "http://192.168.72.50:8080/";
 
-        public async Task<ActionResult> Select(int i = 0, Boolean haundiegia = false)
+        public async Task<ActionResult> Select(int i = 0)
         {
             List<Book> BookInfo = new List<Book>();
             List<Book> BookList = new List<Book>();
@@ -49,10 +49,6 @@ namespace BooksProiektua.Controllers
                 for(int k = i; k < i + 10 && k < BookInfo.Count; k++)
                 {
                     BookList.Add(BookInfo[k]);
-                }
-                if (i + 10 > BookInfo.Count)
-                {
-                    haundiegia = true;
                 }
                 
                 //returning the employee list to view  
@@ -89,6 +85,10 @@ namespace BooksProiektua.Controllers
                     //Deserializing the response recieved from web api and storing into the Employee list  
                     BookInfo = JsonConvert.DeserializeObject<Book>(BookResponse);
 
+                }
+                for(int i = 1; i < BookInfo.genres.Count; i++)
+                {
+                    BookInfo.genres[i] = ", " + BookInfo.genres[i];
                 }
                 //returning the employee list to view  
                 return View(BookInfo);

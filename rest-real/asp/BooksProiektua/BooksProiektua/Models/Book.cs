@@ -15,6 +15,7 @@ namespace BooksProiektua.Models
         public int num { get; set; }
         public String author { get; set; }
         public String country { get; set; }
+        public List<String> genres { get; set; }
         public String imageLink { get; set; }
         public String language { get; set; }
         public String link { get; set; }

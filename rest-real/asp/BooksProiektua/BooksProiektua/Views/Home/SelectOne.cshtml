@@ -5,80 +5,86 @@
 }
 <div class="divBg">
     <h1>@Html.DisplayFor(model => model.title)</h1>
+    <div>
 
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.num)
+            </dt>
 
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.num)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.num)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.num)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.author)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.author)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.author)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.author)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.country)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.country)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.country)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.country)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.genres)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.imageLink)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.genres)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.imageLink)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.language)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.language)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.language)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.language)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.link)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.link)
-        </dt>
+            <dd>
+                <a href="@Html.DisplayFor(model => model.link)" target="_blank">@Html.DisplayFor(model => model.link)</a>
+            </dd>
 
-        <dd>
-            <a href="@Html.DisplayFor(model => model.link)" target="_blank">@Html.DisplayFor(model => model.link)</a>
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.pages)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.pages)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.pages)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.pages)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.title)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.title)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.title)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.title)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.year)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.year)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.year)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.year)
-        </dd>
+        </dl>
+    </div>
+    <div>
 
-    </dl>
+        @{String image = Model.imageLink;}
+        <img class="image" src="~/@image" alt="" />
+    </div>
 </div>
