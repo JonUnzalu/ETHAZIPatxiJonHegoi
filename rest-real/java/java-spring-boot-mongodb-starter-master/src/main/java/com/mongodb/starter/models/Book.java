@@ -26,6 +26,7 @@ public class Book {
     private int num;
     private String author;
     private String country;
+    private List<String> genres;
     private String imageLink;
     private String language;
     private String link;
@@ -105,6 +106,25 @@ public class Book {
         return this;
     }
 
+    /**
+     *
+     *This is the getter of genres
+     *
+     */
+    public List<String> getGenres() {
+        return genres;
+    }
+
+    /**
+     *
+     *This is the setter of genres
+     *
+     */
+    public Book setGenres(List<String> genres) {
+        this.genres = genres;
+        return this;
+    }
+    
     /**
      *
      * This is the getter of imageLink
@@ -219,7 +239,7 @@ public class Book {
      */
     @Override
     public String toString() {
-        return "Book{" + "id=" + id + "num=" + num + "author=" + author + ", country=" + country + ", imagelink=" + imageLink + ", language=" + language + ", link=" + link + ", pages=" + pages + ", title=" + title + ", year=" + year + '}';
+        return "Book{" + "id=" + id + "num=" + num + "author=" + author + ", country=" + country + ", genres=" + genres + ", imagelink=" + imageLink + ", language=" + language + ", link=" + link + ", pages=" + pages + ", title=" + title + ", year=" + year + '}';
     }
 
     /**
@@ -235,7 +255,7 @@ public class Book {
             return false;
         Book book = (Book) o;
         return num == book.num && pages == book.pages && year == book.year && Objects.equals(author, book.author) && Objects.equals(country,book.country) && 
-                Objects.equals(imageLink,book.imageLink) && Objects.equals(language,book.language) && 
+                Objects.equals(genres, book.genres) && Objects.equals(imageLink,book.imageLink) && Objects.equals(language,book.language) && 
                 Objects.equals(link, book.link) && Objects.equals(title, book.title);
     }
     
@@ -245,7 +265,7 @@ public class Book {
      */
     @Override
     public int hashCode() {
-        return Objects.hash(id, num, author, country, imageLink, language, link, pages, title, year);
+        return Objects.hash(id, num, author, country, genres, imageLink, language, link, pages, title, year);
     }
     
 }
