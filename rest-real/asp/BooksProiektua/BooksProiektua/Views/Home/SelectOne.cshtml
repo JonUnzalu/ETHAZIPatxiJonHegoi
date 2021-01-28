@@ -1,0 +1,90 @@
+﻿@model BooksProiektua.Models.Book
+
+@{
+    ViewBag.Title = "SelectOne";
+}
+<div class="divBg">
+    <h1>@Html.DisplayFor(model => model.title)</h1>
+    <div>
+
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.num)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.num)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.author)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.author)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.country)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.country)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.genres)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.genres)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.language)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.language)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.link)
+            </dt>
+
+            <dd>
+                <a href="@Html.DisplayFor(model => model.link)" target="_blank">@Html.DisplayFor(model => model.link)</a>
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.pages)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.pages)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.year)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.year)
+            </dd>
+
+        </dl>
+    </div>
+    <div>
+
+        @{String image = Model.imageLink;}
+        <img class="image" src="~/@image" alt="" />
+    </div>
+</div>
