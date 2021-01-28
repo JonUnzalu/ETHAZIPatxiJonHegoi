@@ -20,9 +20,10 @@ namespace BooksProiektua.Controllers
         //Hosted web API REST Service base url  
         string Baseurl = "http://192.168.72.13:8080/";
 
-        public async Task<ActionResult> Select()
+        public async Task<ActionResult> Select(int i = 0, Boolean haundiegia = false)
         {
             List<Book> BookInfo = new List<Book>();
+            List<Book> BookList = new List<Book>();
             using (var client = new HttpClient())
             {
                 //Passing service base url  
@@ -45,8 +46,17 @@ namespace BooksProiektua.Controllers
                     BookInfo = JsonConvert.DeserializeObject<List<Book>>(BookResponse);
 
                 }
+                for(int k = i; k < i + 10 && k < BookInfo.Count; k++)
+                {
+                    BookList.Add(BookInfo[k]);
+                }
+                if (i + 10 > BookInfo.Count)
+                {
+                    haundiegia = true;
+                }
+                
                 //returning the employee list to view  
-                return View(BookInfo);
+                return View(BookList);
             }
         }
 
@@ -55,7 +65,7 @@ namespace BooksProiektua.Controllers
             return View();
         }
 
-        public async Task<ActionResult> SelectOne()
+        public async Task<ActionResult> SelectOne(int num)
         {
             Book BookInfo = new Book();
             using (var client = new HttpClient())
@@ -68,7 +78,7 @@ namespace BooksProiektua.Controllers
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
-                HttpResponseMessage Res = await client.GetAsync("api/book/num/5");
+                HttpResponseMessage Res = await client.GetAsync("api/book/num/" + num);
 
                 //Checking the response is successful or not which is sent using HttpClient  
                 if (Res.IsSuccessStatusCode)
@@ -180,26 +190,6 @@ namespace BooksProiektua.Controllers
                 return RedirectToAction("../Home/Select");
 
             }
-        }
-
-        /*public async Task<ActionResult> Login(FormCollection collection)
-        {
-
-        }*/
-
-        public ActionResult LoginForm()
-        {
-            return View();
-        }
-
-        /*public async Task<ActionResult> Register(FormCollection collection)
-        {
-
-        }*/
-
-        public ActionResult RegisterForm()
-        {
-            return View();
         }
     }
 }
