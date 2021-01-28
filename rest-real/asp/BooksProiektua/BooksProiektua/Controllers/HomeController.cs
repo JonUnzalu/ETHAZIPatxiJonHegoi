@@ -18,7 +18,7 @@ namespace BooksProiektua.Controllers
         }
 
         //Hosted web API REST Service base url  
-        string Baseurl = "http://192.168.72.50:8080/";
+        string Baseurl = "http://192.168.72.13:8080/";
 
         public async Task<ActionResult> Select(int i = 0)
         {
