@@ -32,6 +32,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.starter.dtos.AveragePageBOOK;
 import com.mongodb.starter.models.Book;
+import java.util.Collections;
 import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -102,6 +103,27 @@ public class MongoDBBookRespository implements BookRepository {
     @Override
     public List<Book> findAll(List<String> ids) {
         return bookCollection.find(in("_id", mapToObjectIds(ids))).into(new ArrayList<>());
+    }
+    
+    
+    /**
+     *
+     * Find the countries of all the books and it sorts them alphabetically
+     *
+     */
+    @Override
+    public List<String> findAllCountries() {
+        ArrayList<Book> bookList = bookCollection.find().into(new ArrayList<>());
+        ArrayList<String> countryList = new ArrayList<>();
+        
+        for(int i=0;i<bookList.size();i++){
+            if(!countryList.contains(bookList.get(i).getCountry())){
+                countryList.add(bookList.get(i).getCountry());
+            }
+        }
+        Collections.sort(countryList);
+        
+        return countryList;
     }
     
     /**

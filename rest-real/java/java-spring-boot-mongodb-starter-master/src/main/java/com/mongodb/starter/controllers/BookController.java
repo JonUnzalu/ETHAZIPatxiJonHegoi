@@ -98,6 +98,16 @@ public class BookController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         return ResponseEntity.ok(book);
     }
+    
+    /**
+     *
+     * A method to get a single book using the num as the variable
+     * 
+     */
+    @GetMapping("book/countries")
+    public List<String> getCountries() {
+        return bookRepository.findAllCountries();
+    }
 
     /**
      *
