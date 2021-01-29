@@ -12,7 +12,7 @@ namespace BooksProiektua.Controllers
     public class LoginController : Controller
     {
         //Hosted web API REST Service base url  
-        string Baseurl = "http://192.168.72.50:8080/";
+        string Baseurl = "http://192.168.72.13:8080/";
 
         public ActionResult LoginForm()
         {
