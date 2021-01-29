@@ -30,6 +30,12 @@ public interface BookRepository {
      * select all books
      */
     List<Book> findAll();
+    
+    /**
+     *
+     * get all countries
+     */
+    List<String> findAllCountries();
 
     /**
      *
