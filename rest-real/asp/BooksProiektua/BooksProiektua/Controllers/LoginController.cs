@@ -49,11 +49,14 @@ namespace BooksProiektua.Controllers
                     int i = 0;
                     while (!found && i < userInfo.Count)
                     {
-                        if (userInfo[i].username == username)
+                        if (userInfo[i].username.Equals(username))
                         {
-                            if (userInfo[i].password == password)
+                            if (userInfo[i].password.Equals(password))
                             {
                                 found = true;
+                            } else
+                            {
+                                i++;
                             }
                         }
                         else
@@ -94,7 +97,7 @@ namespace BooksProiektua.Controllers
                 if (!collection["username"].Equals("") &&
                     !collection["name"].Equals("") &&
                     !collection["surname"].Equals("") &&
-                    !collection["mail"].Equals("") &&
+                    !collection["mail"].Equals("") && collection["mail"].Contains("@") && collection["mail"].Contains(".") &&
                     !collection["password"].Equals(""))
                 {
 
