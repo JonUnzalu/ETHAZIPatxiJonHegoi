@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url("/images/fondo.jpg");
+    background-image: url("/images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -44,4 +44,12 @@ textarea {
 
 .divBg{
     background-color: gray;
+}
+
+.w3-bar-block .w3-bar-item {
+    padding: 20px
+}
+
+.nav-right{
+    right:auto
 }

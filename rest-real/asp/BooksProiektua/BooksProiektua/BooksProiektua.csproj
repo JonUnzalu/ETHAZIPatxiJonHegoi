@@ -154,12 +154,14 @@
     <Content Include="images\a-la-recherche-du-temps-perdu.jpg" />
     <Content Include="images\absalom-absalom.jpg" />
     <Content Include="images\anna-karenina.jpg" />
+    <Content Include="images\background.jpg" />
     <Content Include="images\beloved.jpg" />
     <Content Include="images\berlin-alexanderplatz.jpg" />
     <Content Include="images\blindness.jpg" />
     <Content Include="images\bostan.jpg" />
     <Content Include="images\buddenbrooks.jpg" />
     <Content Include="images\children-of-gebelawi.jpg" />
+    <Content Include="images\companyimg.jpg" />
     <Content Include="images\confessions-of-zeno.jpg" />
     <Content Include="images\crime-and-punishment.jpg" />
     <Content Include="images\dead-souls.jpg" />
@@ -244,6 +246,7 @@
     <Content Include="images\the-tin-drum.jpg" />
     <Content Include="images\the-trial.jpg" />
     <Content Include="images\things-fall-apart.jpg" />
+    <Content Include="images\title.png" />
     <Content Include="images\to-the-lighthouse.jpg" />
     <Content Include="images\ulysses.jpg" />
     <Content Include="images\voyage-au-bout-de-la-nuit.jpg" />

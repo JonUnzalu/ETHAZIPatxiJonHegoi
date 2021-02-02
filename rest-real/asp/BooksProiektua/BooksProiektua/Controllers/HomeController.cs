@@ -17,6 +17,11 @@ namespace BooksProiektua.Controllers
             return View();
         }
 
+        public ActionResult IndexTemp()
+        {
+            return View();
+        }
+
         //Hosted web API REST Service base url  
         string Baseurl = "http://192.168.72.13:8080/";
 
@@ -58,33 +63,34 @@ namespace BooksProiektua.Controllers
 
         public async Task<ActionResult> InsertForm()
         {
-            List<Book> countries = new List<Book>();
-            using (var client = new HttpClient())
-            {
-                //Passing service base url  
-                client.BaseAddress = new Uri(Baseurl);
+            //List<Book> countries = new List<Book>();
+            //using (var client = new HttpClient())
+            //{
+            //    //Passing service base url  
+            //    client.BaseAddress = new Uri(Baseurl);
 
-                client.DefaultRequestHeaders.Clear();
-                //Define request data format  
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            //    client.DefaultRequestHeaders.Clear();
+            //    //Define request data format  
+            //    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
-                HttpResponseMessage Res = await client.GetAsync("api/books");
+            //    //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
+            //    HttpResponseMessage Res = await client.GetAsync("api/books");
 
-                //Checking the response is successful or not which is sent using HttpClient  
-                if (Res.IsSuccessStatusCode)
-                {
-                    //Storing the response details recieved from web api   
-                    var BookResponse = Res.Content.ReadAsStringAsync().Result;
+            //    //Checking the response is successful or not which is sent using HttpClient  
+            //    if (Res.IsSuccessStatusCode)
+            //    {
+            //        //Storing the response details recieved from web api   
+            //        var BookResponse = Res.Content.ReadAsStringAsync().Result;
 
-                    //Deserializing the response recieved from web api and storing into the Employee list  
-                    countries = JsonConvert.DeserializeObject<List<Book>>(BookResponse);
+            //        //Deserializing the response recieved from web api and storing into the Employee list  
+            //        countries = JsonConvert.DeserializeObject<List<Book>>(BookResponse);
 
-                }
+            //    }
 
-                //returning the employee list to view  
-                return View(countries);
-            }
+            //    //returning the employee list to view  
+            //    return View(countries);
+            //}
+            return View();
         }
 
         public async Task<ActionResult> SelectOne(int num)
@@ -182,7 +188,7 @@ namespace BooksProiektua.Controllers
                         await client.PostAsJsonAsync<Book>("api/book/", book);
 
                         //returning the employee list to view  
-                        return RedirectToAction("../Home/Select");
+                        return RedirectToAction("../Home/Index");
                     }
                     else
                     {
@@ -213,7 +219,7 @@ namespace BooksProiektua.Controllers
                 await client.DeleteAsync("api/book/delete/" + num);
 
                 //returning the employee list to view  
-                return RedirectToAction("../Home/Select");
+                return RedirectToAction("../Home/Index");
 
             }
         }
