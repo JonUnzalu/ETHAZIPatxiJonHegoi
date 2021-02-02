@@ -68,7 +68,7 @@ textarea {
 
 .vertical-center {
     position: absolute;
-    top: 35%;
+    top: 30%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
