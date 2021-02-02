@@ -42,8 +42,16 @@ textarea {
     margin-right: auto;
 }
 
+.image2 {
+    display: block;
+    height: 275px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .divBg{
     background-color: gray;
+    border-radius:10px;
 }
 
 .w3-bar-block .w3-bar-item {
@@ -52,4 +60,22 @@ textarea {
 
 .nav-right{
     right:auto
+}
+
+.hover:hover {
+    background-color: #cccccc;
+}
+
+.vertical-center {
+    position: absolute;
+    top: 35%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.horizontal-center {
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }

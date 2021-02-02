@@ -3,88 +3,97 @@
 @{
     ViewBag.Title = "SelectOne";
 }
-<div class="divBg">
-    <h1>@Html.DisplayFor(model => model.title)</h1>
-    <div>
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+</head>
+<body>
+    <div class="divBg w3-row-padding w3-padding-16 vertical-center horizontal-center w3-container" style="height:40%; width:60%;">
+        <h1>@Html.DisplayFor(model => model.title)</h1>
+        <div class="w3-half" style="padding:20px">
 
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.num)
-            </dt>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.num)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.num)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.num)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.author)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.author)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.author)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.author)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.country)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.country)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.country)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.country)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.genres)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.genres)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.genres)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.genres)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.language)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.language)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.language)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.language)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.link)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.link)
+                </dt>
 
-            <dd>
-                <a href="@Html.DisplayFor(model => model.link)" target="_blank">@Html.DisplayFor(model => model.link)</a>
-            </dd>
+                <dd>
+                    <a href="@Html.DisplayFor(model => model.link)" target="_blank">@Html.DisplayFor(model => model.link)</a>
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.pages)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.pages)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.pages)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.pages)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.title)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.title)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.title)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.title)
+                </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.year)
-            </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.year)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.year)
-            </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.year)
+                </dd>
 
-        </dl>
+            </dl>
+        </div>
+        <div class="w3-half">
+
+            @{String image = Model.imageLink;}
+            <img class="image2" src="~/@image" alt="" />
+        </div>
     </div>
-    <div>
-
-        @{String image = Model.imageLink;}
-        <img class="image" src="~/@image" alt="" style="float:right" />
-    </div>
-</div>
+</body>
