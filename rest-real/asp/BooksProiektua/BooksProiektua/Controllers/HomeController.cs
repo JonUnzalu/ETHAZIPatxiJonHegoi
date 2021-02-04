@@ -25,6 +25,45 @@ namespace BooksProiektua.Controllers
         //Hosted web API REST Service base url  
         string Baseurl = "http://192.168.72.13:8080/";
 
+        public async Task<ActionResult> SelectGenre(String genre)
+        {
+            List<Book> BookInfo = new List<Book>();
+            List<Book> BookList = new List<Book>();
+            using (var client = new HttpClient())
+            {
+                //Passing service base url  
+                client.BaseAddress = new Uri(Baseurl);
+
+                client.DefaultRequestHeaders.Clear();
+                //Define request data format  
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
+                HttpResponseMessage Res = await client.GetAsync("api/books");
+
+                //Checking the response is successful or not which is sent using HttpClient  
+                if (Res.IsSuccessStatusCode)
+                {
+                    //Storing the response details recieved from web api   
+                    var BookResponse = Res.Content.ReadAsStringAsync().Result;
+
+                    //Deserializing the response recieved from web api and storing into the Employee list  
+                    BookInfo = JsonConvert.DeserializeObject<List<Book>>(BookResponse);
+
+                }
+
+                for (int i = 0; i < BookInfo.Count; i++)
+                {
+                    if (BookInfo[i].genres.Contains(genre)) {
+                        BookList.Add(BookInfo[i]);
+                    }
+                }
+
+                //returning the employee list to view  
+                return View(BookList);
+            }
+        }
+
         public async Task<ActionResult> Select(int i = 0)
         {
             List<Book> BookInfo = new List<Book>();
@@ -132,9 +171,11 @@ namespace BooksProiektua.Controllers
             using (var client = new HttpClient())
             {
                 Book book = new Book();
+                book.genres = new List<String>();
                 List<Book> BookInfo = new List<Book>();
                 if (!collection["author"].Equals("") &&
                     !collection["country"].Equals("") &&
+                    !collection["genre"].Equals("-Select one-") &&
                     !collection["imageLink"].Equals("") &&
                     !collection["language"].Equals("") &&
                     !collection["link"].Equals("") &&
@@ -146,6 +187,11 @@ namespace BooksProiektua.Controllers
                     {
                         book.author = collection["author"];
                         book.country = collection["country"];
+                        book.genres.Add(collection["genre"]);
+                        if (!collection["genre2"].Equals("-Select one-"))
+                        {
+                            book.genres.Add(collection["genre2"]);
+                        }
                         book.imageLink = collection["imageLink"];
                         book.language = collection["language"];
                         book.link = collection["link"];

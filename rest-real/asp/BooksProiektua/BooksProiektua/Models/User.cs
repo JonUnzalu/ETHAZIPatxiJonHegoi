@@ -7,6 +7,7 @@ namespace BooksProiektua.Models
 {
     public class User
     {
+        public static Boolean loged { get; set; }
         public int num { get; set; }
         public String username { get; set; }
         public String name { get; set; }
