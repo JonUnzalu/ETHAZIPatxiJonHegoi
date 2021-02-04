@@ -1,8 +1,12 @@
 [
   {
-    "num":  1,
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e04"
+    },
+    "num": 1,
     "author": "Chinua Achebe",
     "country": "Nigeria",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/things-fall-apart.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
@@ -11,9 +15,13 @@
     "year": 1958
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e05"
+    },
     "num": 2,
     "author": "Hans Christian Andersen",
     "country": "Denmark",
+    "genres": [ "Fantasy" ],
     "imageLink": "images/fairy-tales.jpg",
     "language": "Danish",
     "link": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\n",
@@ -22,9 +30,13 @@
     "year": 1836
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e06"
+    },
     "num": 3,
     "author": "Dante Alighieri",
     "country": "Italy",
+    "genres": [ "Poetry" ],
     "imageLink": "images/the-divine-comedy.jpg",
     "language": "Italian",
     "link": "https://en.wikipedia.org/wiki/Divine_Comedy\n",
@@ -33,9 +45,13 @@
     "year": 1315
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e07"
+    },
     "num": 4,
     "author": "Unknown",
     "country": "Sumer and Akkadian Empire",
+    "genres": [ "Poetry", "Fiction", "Mitological" ],
     "imageLink": "images/the-epic-of-gilgamesh.jpg",
     "language": "Akkadian",
     "link": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh\n",
@@ -44,9 +60,13 @@
     "year": -1700
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e08"
+    },
     "num": 5,
     "author": "Unknown",
     "country": "Achaemenid Empire",
+    "genres": [ "Historical" ],
     "imageLink": "images/the-book-of-job.jpg",
     "language": "Hebrew",
     "link": "https://en.wikipedia.org/wiki/Book_of_Job\n",
@@ -55,9 +75,13 @@
     "year": -600
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e09"
+    },
     "num": 6,
     "author": "Unknown",
     "country": "India/Iran/Iraq/Egypt/Tajikistan",
+    "genres": [ "Poetry", "Fiction" ],
     "imageLink": "images/one-thousand-and-one-nights.jpg",
     "language": "Arabic",
     "link": "https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights\n",
@@ -66,20 +90,28 @@
     "year": 1200
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e0a"
+    },
     "num": 7,
     "author": "Unknown",
     "country": "Iceland",
+    "genres": [ "Fiction" ],
     "imageLink": "images/njals-saga.jpg",
     "language": "Old Norse",
     "link": "https://en.wikipedia.org/wiki/Nj%C3%A1ls_saga\n",
     "pages": 384,
-    "title": "Nj\u00e1l's Saga",
+    "title": "Njál's Saga",
     "year": 1350
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e0b"
+    },
     "num": 8,
     "author": "Jane Austen",
     "country": "United Kingdom",
+    "genres": [ "Satire", "Fiction", "Romance" ],
     "imageLink": "images/pride-and-prejudice.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Pride_and_Prejudice\n",
@@ -88,20 +120,28 @@
     "year": 1813
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e0c"
+    },
     "num": 9,
-    "author": "Honor\u00e9 de Balzac",
+    "author": "Honoré de Balzac",
     "country": "France",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/le-pere-goriot.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Le_P%C3%A8re_Goriot\n",
     "pages": 443,
-    "title": "Le P\u00e8re Goriot",
+    "title": "Le Père Goriot",
     "year": 1835
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e0d"
+    },
     "num": 10,
     "author": "Samuel Beckett",
     "country": "Republic of Ireland",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/molloy-malone-dies-the-unnamable.jpg",
     "language": "French, English",
     "link": "https://en.wikipedia.org/wiki/Molloy_(novel)\n",
@@ -110,9 +150,13 @@
     "year": 1952
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e0e"
+    },
     "num": 11,
     "author": "Giovanni Boccaccio",
     "country": "Italy",
+    "genres": [ "Fiction" ],
     "imageLink": "images/the-decameron.jpg",
     "language": "Italian",
     "link": "https://en.wikipedia.org/wiki/The_Decameron\n",
@@ -121,9 +165,13 @@
     "year": 1351
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e0f"
+    },
     "num": 12,
     "author": "Jorge Luis Borges",
     "country": "Argentina",
+    "genres": [ "Fiction" ],
     "imageLink": "images/ficciones.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Ficciones\n",
@@ -132,9 +180,13 @@
     "year": 1965
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e10"
+    },
     "num": 13,
-    "author": "Emily Bront\u00eb",
+    "author": "Emily Brontë",
     "country": "United Kingdom",
+    "genres": [ "Novel", "Tragedy" ],
     "imageLink": "images/wuthering-heights.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Wuthering_Heights\n",
@@ -143,9 +195,13 @@
     "year": 1847
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e11"
+    },
     "num": 14,
     "author": "Albert Camus",
     "country": "Algeria, French Empire",
+    "genres": [ "Novel", "Filosophical", "Political" ],
     "imageLink": "images/l-etranger.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/The_Stranger_(novel)\n",
@@ -154,9 +210,13 @@
     "year": 1942
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e12"
+    },
     "num": 15,
     "author": "Paul Celan",
     "country": "Romania, France",
+    "genres": [ "Poetry" ],
     "imageLink": "images/poems-paul-celan.jpg",
     "language": "German",
     "link": "\n",
@@ -165,9 +225,13 @@
     "year": 1952
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e13"
+    },
     "num": 16,
-    "author": "Louis-Ferdinand C\u00e9line",
+    "author": "Louis-Ferdinand Céline",
     "country": "France",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/voyage-au-bout-de-la-nuit.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Journey_to_the_End_of_the_Night\n",
@@ -176,9 +240,13 @@
     "year": 1932
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e14"
+    },
     "num": 17,
     "author": "Miguel de Cervantes",
     "country": "Spain",
+    "genres": [ "Comedy", "Political", "Satire" ],
     "imageLink": "images/don-quijote-de-la-mancha.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Don_Quixote\n",
@@ -187,9 +255,13 @@
     "year": 1610
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e15"
+    },
     "num": 18,
     "author": "Geoffrey Chaucer",
     "country": "England",
+    "genres": [ "Poetry", "Fiction", "Satire" ],
     "imageLink": "images/the-canterbury-tales.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Canterbury_Tales\n",
@@ -198,9 +270,13 @@
     "year": 1450
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e16"
+    },
     "num": 19,
     "author": "Anton Chekhov",
     "country": "Russia",
+    "genres": [ "Filosophical", "Political" ],
     "imageLink": "images/stories-of-anton-chekhov.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/List_of_short_stories_by_Anton_Chekhov\n",
@@ -209,9 +285,13 @@
     "year": 1886
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e17"
+    },
     "num": 20,
     "author": "Joseph Conrad",
     "country": "United Kingdom",
+    "genres": [ "Novel", "Fiction", "Political" ],
     "imageLink": "images/nostromo.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Nostromo\n",
@@ -220,9 +300,13 @@
     "year": 1904
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e18"
+    },
     "num": 21,
     "author": "Charles Dickens",
     "country": "United Kingdom",
+    "genres": [ "Novel", "Political" ],
     "imageLink": "images/great-expectations.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Great_Expectations\n",
@@ -231,9 +315,13 @@
     "year": 1861
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e19"
+    },
     "num": 22,
     "author": "Denis Diderot",
     "country": "France",
+    "genres": [ "Novel", "Filosophical" ],
     "imageLink": "images/jacques-the-fatalist.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Jacques_the_Fatalist\n",
@@ -242,9 +330,13 @@
     "year": 1796
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e1a"
+    },
     "num": 23,
-    "author": "Alfred D\u00f6blin",
+    "author": "Alfred Döblin",
     "country": "Germany",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/berlin-alexanderplatz.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/Berlin_Alexanderplatz\n",
@@ -253,9 +345,13 @@
     "year": 1929
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e1b"
+    },
     "num": 24,
     "author": "Fyodor Dostoevsky",
     "country": "Russia",
+    "genres": [ "Novel", "Political" ],
     "imageLink": "images/crime-and-punishment.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Crime_and_Punishment\n",
@@ -264,9 +360,13 @@
     "year": 1866
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e1c"
+    },
     "num": 25,
     "author": "Fyodor Dostoevsky",
     "country": "Russia",
+    "genres": [ "Novel", "Filosophical" ],
     "imageLink": "images/the-idiot.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Theidiot\n",
@@ -275,9 +375,13 @@
     "year": 1869
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e1d"
+    },
     "num": 26,
     "author": "Fyodor Dostoevsky",
     "country": "Russia",
+    "genres": [ "Novel", "Fiction", "Satire", "Filosophical", "Political" ],
     "imageLink": "images/the-possessed.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Demons_(Dostoyevsky_novel)\n",
@@ -286,9 +390,13 @@
     "year": 1872
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e1e"
+    },
     "num": 27,
     "author": "Fyodor Dostoevsky",
     "country": "Russia",
+    "genres": [ "Novel", "Filosophical" ],
     "imageLink": "images/the-brothers-karamazov.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/The_Brothers_Karamazov\n",
@@ -297,9 +405,13 @@
     "year": 1880
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e1f"
+    },
     "num": 28,
     "author": "George Eliot",
     "country": "United Kingdom",
+    "genres": [ "Novel", "Fiction", "Political" ],
     "imageLink": "images/middlemarch.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Middlemarch\n",
@@ -308,9 +420,13 @@
     "year": 1871
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e20"
+    },
     "num": 29,
     "author": "Ralph Ellison",
     "country": "United States",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/invisible-man.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Invisible_Man\n",
@@ -319,9 +435,13 @@
     "year": 1952
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e21"
+    },
     "num": 30,
     "author": "Euripides",
     "country": "Greece",
+    "genres": [ "Mithological" ],
     "imageLink": "images/medea.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Medea_(play)\n",
@@ -330,9 +450,13 @@
     "year": -431
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e22"
+    },
     "num": 31,
     "author": "William Faulkner",
     "country": "United States",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/absalom-absalom.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Absalom,_Absalom!\n",
@@ -341,9 +465,13 @@
     "year": 1936
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e23"
+    },
     "num": 32,
     "author": "William Faulkner",
     "country": "United States",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/the-sound-and-the-fury.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Sound_and_the_Fury\n",
@@ -352,9 +480,13 @@
     "year": 1929
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e24"
+    },
     "num": 33,
     "author": "Gustave Flaubert",
     "country": "France",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/madame-bovary.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Madame_Bovary\n",
@@ -363,9 +495,13 @@
     "year": 1857
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e25"
+    },
     "num": 34,
     "author": "Gustave Flaubert",
     "country": "France",
+    "genres": [ "Historic", "Novel" ],
     "imageLink": "images/l-education-sentimentale.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Sentimental_Education\n",
@@ -374,9 +510,13 @@
     "year": 1869
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e26"
+    },
     "num": 35,
-    "author": "Federico Garc\u00eda Lorca",
+    "author": "Federico García Lorca",
     "country": "Spain",
+    "genres": [ "Poetry" ],
     "imageLink": "images/gypsy-ballads.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Gypsy_Ballads\n",
@@ -385,9 +525,13 @@
     "year": 1928
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e27"
+    },
     "num": 36,
-    "author": "Gabriel Garc\u00eda M\u00e1rquez",
+    "author": "Gabriel García Márquez",
     "country": "Colombia",
+    "genres": [ "Poetry", "Fantasy" ],
     "imageLink": "images/one-hundred-years-of-solitude.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude\n",
@@ -396,9 +540,13 @@
     "year": 1967
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e28"
+    },
     "num": 37,
-    "author": "Gabriel Garc\u00eda M\u00e1rquez",
+    "author": "Gabriel García Márquez",
     "country": "Colombia",
+    "genres": [ "Romance", "Novel" ],
     "imageLink": "images/love-in-the-time-of-cholera.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Love_in_the_Time_of_Cholera\n",
@@ -407,9 +555,13 @@
     "year": 1985
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e29"
+    },
     "num": 38,
     "author": "Johann Wolfgang von Goethe",
     "country": "Saxe-Weimar",
+    "genres": [ "Filosofy", "Historical" ],
     "imageLink": "images/faust.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/Goethe%27s_Faust\n",
@@ -418,9 +570,13 @@
     "year": 1832
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e2a"
+    },
     "num": 39,
     "author": "Nikolai Gogol",
     "country": "Russia",
+    "genres": [ "Political", "Satire" ],
     "imageLink": "images/dead-souls.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Dead_Souls\n",
@@ -429,9 +585,13 @@
     "year": 1842
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e2b"
+    },
     "num": 40,
-    "author": "G\u00fcnter Grass",
+    "author": "Günter Grass",
     "country": "Germany",
+    "genres": [ "Fantasy" ],
     "imageLink": "images/the-tin-drum.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Tin_Drum\n",
@@ -440,9 +600,13 @@
     "year": 1959
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e2c"
+    },
     "num": 41,
-    "author": "Jo\u00e3o Guimar\u00e3es Rosa",
+    "author": "João Guimarães Rosa",
     "country": "Brazil",
+    "genres": [ "Mistery", "Drama" ],
     "imageLink": "images/the-devil-to-pay-in-the-backlands.jpg",
     "language": "Portuguese",
     "link": "https://en.wikipedia.org/wiki/The_Devil_to_Pay_in_the_Backlands\n",
@@ -451,9 +615,13 @@
     "year": 1956
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e2d"
+    },
     "num": 42,
     "author": "Knut Hamsun",
     "country": "Norway",
+    "genres": [ "Filosofical", "Novel" ],
     "imageLink": "images/hunger.jpg",
     "language": "Norwegian",
     "link": "https://en.wikipedia.org/wiki/Hunger_(Hamsun_novel)\n",
@@ -462,9 +630,13 @@
     "year": 1890
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e2e"
+    },
     "num": 43,
     "author": "Ernest Hemingway",
     "country": "United States",
+    "genres": [ "Fiction", "Fantasy" ],
     "imageLink": "images/the-old-man-and-the-sea.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea\n",
@@ -473,9 +645,13 @@
     "year": 1952
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e2f"
+    },
     "num": 44,
     "author": "Homer",
     "country": "Greece",
+    "genres": [ "Filosofical" ],
     "imageLink": "images/the-iliad-of-homer.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Iliad\n",
@@ -484,9 +660,13 @@
     "year": -735
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e30"
+    },
     "num": 45,
     "author": "Homer",
     "country": "Greece",
+    "genres": [ "Filosofical" ],
     "imageLink": "images/the-odyssey-of-homer.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Odyssey\n",
@@ -495,9 +675,13 @@
     "year": -800
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e31"
+    },
     "num": 46,
     "author": "Henrik Ibsen",
     "country": "Norway",
+    "genres": [ "Tragedy" ],
     "imageLink": "images/a-Dolls-house.jpg",
     "language": "Norwegian",
     "link": "https://en.wikipedia.org/wiki/A_Doll%27s_House\n",
@@ -506,9 +690,13 @@
     "year": 1879
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e32"
+    },
     "num": 47,
     "author": "James Joyce",
     "country": "Irish Free State",
+    "genres": [ "Novel" ],
     "imageLink": "images/ulysses.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Ulysses_(novel)\n",
@@ -517,9 +705,13 @@
     "year": 1922
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e33"
+    },
     "num": 48,
     "author": "Franz Kafka",
     "country": "Czechoslovakia",
+    "genres": [ "Biographical" ],
     "imageLink": "images/stories-of-franz-kafka.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/Franz_Kafka_bibliography#Short_stories\n",
@@ -528,9 +720,13 @@
     "year": 1924
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e34"
+    },
     "num": 49,
     "author": "Franz Kafka",
     "country": "Czechoslovakia",
+    "genres": [ "Filosofical", "Fiction" ],
     "imageLink": "images/the-trial.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Trial\n",
@@ -539,9 +735,13 @@
     "year": 1925
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e35"
+    },
     "num": 50,
     "author": "Franz Kafka",
     "country": "Czechoslovakia",
+    "genres": [ "Filosofical", "Fiction" ],
     "imageLink": "images/the-castle.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Castle_(novel)\n",
@@ -550,9 +750,13 @@
     "year": 1926
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e36"
+    },
     "num": 51,
-    "author": "K\u0101lid\u0101sa",
+    "author": "Kālidāsa",
     "country": "India",
+    "genres": [ "Drama", "Tragedy", "Poetry" ],
     "imageLink": "images/the-recognition-of-shakuntala.jpg",
     "language": "Sanskrit",
     "link": "https://en.wikipedia.org/wiki/Abhij%C3%B1%C4%81na%C5%9B%C4%81kuntalam\n",
@@ -561,9 +765,13 @@
     "year": 150
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e37"
+    },
     "num": 52,
     "author": "Yasunari Kawabata",
     "country": "Japan",
+    "genres": [ "Filosofical", "Poetry" ],
     "imageLink": "images/the-sound-of-the-mountain.jpg",
     "language": "Japanese",
     "link": "https://en.wikipedia.org/wiki/The_Sound_of_the_Mountain\n",
@@ -572,9 +780,13 @@
     "year": 1954
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e38"
+    },
     "num": 53,
     "author": "Nikos Kazantzakis",
     "country": "Greece",
+    "genres": [ "Novel" ],
     "imageLink": "images/zorba-the-greek.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Zorba_the_Greek\n",
@@ -583,9 +795,13 @@
     "year": 1946
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e39"
+    },
     "num": 54,
     "author": "D. H. Lawrence",
     "country": "United Kingdom",
+    "genres": [ "Biographical", "Novel" ],
     "imageLink": "images/sons-and-lovers.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Sons_and_Lovers\n",
@@ -594,9 +810,13 @@
     "year": 1913
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e3a"
+    },
     "num": 55,
-    "author": "Halld\u00f3r Laxness",
+    "author": "Halldór Laxness",
     "country": "Iceland",
+    "genres": [ "Novel" ],
     "imageLink": "images/independent-people.jpg",
     "language": "Icelandic",
     "link": "https://en.wikipedia.org/wiki/Independent_People\n",
@@ -605,9 +825,13 @@
     "year": 1934
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e3b"
+    },
     "num": 56,
     "author": "Giacomo Leopardi",
     "country": "Italy",
+    "genres": [ "Poetry" ],
     "imageLink": "images/poems-giacomo-leopardi.jpg",
     "language": "Italian",
     "link": "\n",
@@ -616,9 +840,13 @@
     "year": 1818
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e3c"
+    },
     "num": 57,
     "author": "Doris Lessing",
     "country": "United Kingdom",
+    "genres": [ "Novel" ],
     "imageLink": "images/the-golden-notebook.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Golden_Notebook\n",
@@ -627,9 +855,13 @@
     "year": 1962
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e3d"
+    },
     "num": 58,
     "author": "Astrid Lindgren",
     "country": "Sweden",
+    "genres": [ "Comedy" ],
     "imageLink": "images/pippi-longstocking.jpg",
     "language": "Swedish",
     "link": "https://en.wikipedia.org/wiki/Pippi_Longstocking\n",
@@ -638,9 +870,13 @@
     "year": 1945
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e3e"
+    },
     "num": 59,
     "author": "Lu Xun",
     "country": "China",
+    "genres": [ "Political" ],
     "imageLink": "images/diary-of-a-madman.jpg",
     "language": "Chinese",
     "link": "https://en.wikipedia.org/wiki/A_Madman%27s_Diary\n",
@@ -649,9 +885,13 @@
     "year": 1918
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e3f"
+    },
     "num": 60,
     "author": "Naguib Mahfouz",
     "country": "Egypt",
+    "genres": [ "Political" ],
     "imageLink": "images/children-of-gebelawi.jpg",
     "language": "Arabic",
     "link": "https://en.wikipedia.org/wiki/Children_of_Gebelawi\n",
@@ -660,9 +900,13 @@
     "year": 1959
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e40"
+    },
     "num": 61,
     "author": "Thomas Mann",
     "country": "Germany",
+    "genres": [ "Novel", "Historical" ],
     "imageLink": "images/buddenbrooks.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/Buddenbrooks\n",
@@ -671,9 +915,13 @@
     "year": 1901
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e41"
+    },
     "num": 62,
     "author": "Thomas Mann",
     "country": "Germany",
+    "genres": [ "Filosofical", "Historical" ],
     "imageLink": "images/the-magic-mountain.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Magic_Mountain\n",
@@ -682,9 +930,13 @@
     "year": 1924
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e42"
+    },
     "num": 63,
     "author": "Herman Melville",
     "country": "United States",
+    "genres": [ "Fiction", "Novel", "Fantasy" ],
     "imageLink": "images/moby-dick.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Moby-Dick\n",
@@ -693,9 +945,13 @@
     "year": 1851
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e43"
+    },
     "num": 64,
     "author": "Michel de Montaigne",
     "country": "France",
+    "genres": [ "Poetry" ],
     "imageLink": "images/essais.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Essays_(Montaigne)\n",
@@ -704,9 +960,13 @@
     "year": 1595
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e44"
+    },
     "num": 65,
     "author": "Elsa Morante",
     "country": "Italy",
+    "genres": [ "Historical", "Novel" ],
     "imageLink": "images/history.jpg",
     "language": "Italian",
     "link": "https://en.wikipedia.org/wiki/History_(novel)\n",
@@ -715,9 +975,13 @@
     "year": 1974
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e45"
+    },
     "num": 66,
     "author": "Toni Morrison",
     "country": "United States",
+    "genres": [ "Fiction", "Novel" ],
     "imageLink": "images/beloved.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Beloved_(novel)\n",
@@ -726,9 +990,13 @@
     "year": 1987
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e46"
+    },
     "num": 67,
     "author": "Murasaki Shikibu",
     "country": "Japan",
+    "genres": [ "Fiction", "Novel" ],
     "imageLink": "images/the-tale-of-genji.jpg",
     "language": "Japanese",
     "link": "https://en.wikipedia.org/wiki/The_Tale_of_Genji\n",
@@ -737,9 +1005,13 @@
     "year": 1006
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e47"
+    },
     "num": 68,
     "author": "Robert Musil",
     "country": "Austria",
+    "genres": [ "Filosofical", "Novel" ],
     "imageLink": "images/the-man-without-qualities.jpg",
     "language": "German",
     "link": "https://en.wikipedia.org/wiki/The_Man_Without_Qualities\n",
@@ -748,9 +1020,13 @@
     "year": 1931
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e48"
+    },
     "num": 69,
     "author": "Vladimir Nabokov",
     "country": "Russia/United States",
+    "genres": [ "Fiction", "Novel" ],
     "imageLink": "images/lolita.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Lolita\n",
@@ -759,9 +1035,13 @@
     "year": 1955
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e49"
+    },
     "num": 70,
     "author": "George Orwell",
     "country": "United Kingdom",
+    "genres": [ "Fiction" ],
     "imageLink": "images/nineteen-eighty-four.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four\n",
@@ -770,9 +1050,13 @@
     "year": 1949
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e4a"
+    },
     "num": 71,
     "author": "Ovid",
     "country": "Roman Empire",
+    "genres": [ "Poetry" ],
     "imageLink": "images/the-metamorphoses-of-ovid.jpg",
     "language": "Classical Latin",
     "link": "https://en.wikipedia.org/wiki/Metamorphoses\n",
@@ -781,9 +1065,13 @@
     "year": 100
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e4b"
+    },
     "num": 72,
     "author": "Fernando Pessoa",
     "country": "Portugal",
+    "genres": [ "Biographical", "Novel" ],
     "imageLink": "images/the-book-of-disquiet.jpg",
     "language": "Portuguese",
     "link": "https://en.wikipedia.org/wiki/The_Book_of_Disquiet\n",
@@ -792,9 +1080,13 @@
     "year": 1928
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e4c"
+    },
     "num": 73,
     "author": "Edgar Allan Poe",
     "country": "United States",
+    "genres": [ "Horror" ],
     "imageLink": "images/tales-and-poems-of-edgar-allan-poe.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Edgar_Allan_Poe_bibliography#Tales\n",
@@ -803,9 +1095,13 @@
     "year": 1950
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e4d"
+    },
     "num": 74,
     "author": "Marcel Proust",
     "country": "France",
+    "genres": [ "Filosofical" ],
     "imageLink": "images/a-la-recherche-du-temps-perdu.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/In_Search_of_Lost_Time\n",
@@ -814,9 +1110,13 @@
     "year": 1920
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e4e"
+    },
     "num": 75,
-    "author": "Fran\u00e7ois Rabelais",
+    "author": "François Rabelais",
     "country": "France",
+    "genres": [ "Satire" ],
     "imageLink": "images/gargantua-and-pantagruel.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Gargantua_and_Pantagruel\n",
@@ -825,20 +1125,28 @@
     "year": 1533
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e4f"
+    },
     "num": 76,
     "author": "Juan Rulfo",
     "country": "Mexico",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/pedro-paramo.jpg",
     "language": "Spanish",
     "link": "https://en.wikipedia.org/wiki/Pedro_P%C3%A1ramo\n",
     "pages": 124,
-    "title": "Pedro P\u00e1ramo",
+    "title": "Pedro Páramo",
     "year": 1955
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e50"
+    },
     "num": 77,
     "author": "Rumi",
     "country": "Sultanate of Rum",
+    "genres": [ "Poetry" ],
     "imageLink": "images/the-masnavi.jpg",
     "language": "Persian",
     "link": "https://en.wikipedia.org/wiki/Masnavi\n",
@@ -847,9 +1155,13 @@
     "year": 1236
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e51"
+    },
     "num": 78,
     "author": "Salman Rushdie",
     "country": "United Kingdom, India",
+    "genres": [ "Novel", "Fiction", "Fantasy" ],
     "imageLink": "images/midnights-children.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Midnight%27s_Children\n",
@@ -858,9 +1170,13 @@
     "year": 1981
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e52"
+    },
     "num": 79,
     "author": "Saadi",
     "country": "Persia, Persian Empire",
+    "genres": [ "Poetry" ],
     "imageLink": "images/bostan.jpg",
     "language": "Persian",
     "link": "https://en.wikipedia.org/wiki/Bustan_(book)\n",
@@ -869,9 +1185,13 @@
     "year": 1257
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e53"
+    },
     "num": 80,
     "author": "Tayeb Salih",
     "country": "Sudan",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/season-of-migration-to-the-north.jpg",
     "language": "Arabic",
     "link": "https://en.wikipedia.org/wiki/Season_of_Migration_to_the_North\n",
@@ -880,9 +1200,13 @@
     "year": 1966
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e54"
+    },
     "num": 81,
-    "author": "Jos\u00e9 Saramago",
+    "author": "José Saramago",
     "country": "Portugal",
+    "genres": [ "Novel" ],
     "imageLink": "images/blindness.jpg",
     "language": "Portuguese",
     "link": "https://en.wikipedia.org/wiki/Blindness_(novel)\n",
@@ -891,9 +1215,13 @@
     "year": 1995
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e55"
+    },
     "num": 82,
     "author": "William Shakespeare",
     "country": "England",
+    "genres": [ "Drama" ],
     "imageLink": "images/hamlet.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Hamlet\n",
@@ -902,9 +1230,13 @@
     "year": 1603
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e56"
+    },
     "num": 83,
     "author": "William Shakespeare",
     "country": "England",
+    "genres": [ "Tragedy" ],
     "imageLink": "images/king-lear.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/King_Lear\n",
@@ -913,9 +1245,13 @@
     "year": 1608
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e57"
+    },
     "num": 84,
     "author": "William Shakespeare",
     "country": "England",
+    "genres": [ "Tragedy" ],
     "imageLink": "images/othello.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Othello\n",
@@ -924,9 +1260,13 @@
     "year": 1609
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e58"
+    },
     "num": 85,
     "author": "Sophocles",
     "country": "Greece",
+    "genres": [ "Tragedy", "Mithological" ],
     "imageLink": "images/oedipus-the-king.jpg",
     "language": "Greek",
     "link": "https://en.wikipedia.org/wiki/Oedipus_the_King\n",
@@ -935,9 +1275,13 @@
     "year": -430
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e59"
+    },
     "num": 86,
     "author": "Stendhal",
     "country": "France",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/le-rouge-et-le-noir.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/The_Red_and_the_Black\n",
@@ -946,9 +1290,13 @@
     "year": 1830
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e5a"
+    },
     "num": 87,
     "author": "Laurence Sterne",
     "country": "England",
+    "genres": [ "Novel", "Comedy" ],
     "imageLink": "images/the-life-and-opinions-of-tristram-shandy.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/The_Life_and_Opinions_of_Tristram_Shandy,_Gentleman\n",
@@ -957,9 +1305,13 @@
     "year": 1760
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e5b"
+    },
     "num": 88,
     "author": "Italo Svevo",
     "country": "Italy",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/confessions-of-zeno.jpg",
     "language": "Italian",
     "link": "https://en.wikipedia.org/wiki/Zeno%27s_Conscience\n",
@@ -968,9 +1320,13 @@
     "year": 1923
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e5c"
+    },
     "num": 89,
     "author": "Jonathan Swift",
     "country": "Ireland",
+    "genres": [ "Novel", "Fantasy" ],
     "imageLink": "images/gullivers-travels.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Gulliver%27s_Travels\n",
@@ -979,9 +1335,13 @@
     "year": 1726
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e5d"
+    },
     "num": 90,
     "author": "Leo Tolstoy",
     "country": "Russia",
+    "genres": [ "Novel", "Historical", "Filosofical" ],
     "imageLink": "images/war-and-peace.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/War_and_Peace\n",
@@ -990,9 +1350,13 @@
     "year": 1867
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e5e"
+    },
     "num": 91,
     "author": "Leo Tolstoy",
     "country": "Russia",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/anna-karenina.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/Anna_Karenina\n",
@@ -1001,9 +1365,13 @@
     "year": 1877
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e5f"
+    },
     "num": 92,
     "author": "Leo Tolstoy",
     "country": "Russia",
+    "genres": [ "Fiction", "Novel" ],
     "imageLink": "images/the-death-of-ivan-ilyich.jpg",
     "language": "Russian",
     "link": "https://en.wikipedia.org/wiki/The_Death_of_Ivan_Ilyich\n",
@@ -1012,9 +1380,13 @@
     "year": 1886
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e60"
+    },
     "num": 93,
     "author": "Mark Twain",
     "country": "United States",
+    "genres": [ "Novel", "Comedy" ],
     "imageLink": "images/the-adventures-of-huckleberry-finn.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn\n",
@@ -1023,9 +1395,13 @@
     "year": 1884
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e61"
+    },
     "num": 94,
     "author": "Valmiki",
     "country": "India",
+    "genres": [ "Mithological" ],
     "imageLink": "images/ramayana.jpg",
     "language": "Sanskrit",
     "link": "https://en.wikipedia.org/wiki/Ramayana\n",
@@ -1034,9 +1410,13 @@
     "year": -450
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e62"
+    },
     "num": 95,
     "author": "Virgil",
     "country": "Roman Empire",
+    "genres": [ "Fantasy" ],
     "imageLink": "images/the-aeneid.jpg",
     "language": "Classical Latin",
     "link": "https://en.wikipedia.org/wiki/Aeneid\n",
@@ -1045,9 +1425,13 @@
     "year": -23
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e63"
+    },
     "num": 96,
     "author": "Vyasa",
     "country": "India",
+    "genres": [ "Mithological" ],
     "imageLink": "images/the-mahab-harata.jpg",
     "language": "Sanskrit",
     "link": "https://en.wikipedia.org/wiki/Mahabharata\n",
@@ -1056,9 +1440,13 @@
     "year": -700
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e64"
+    },
     "num": 97,
     "author": "Walt Whitman",
     "country": "United States",
+    "genres": [ "Poetry" ],
     "imageLink": "images/leaves-of-grass.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Leaves_of_Grass\n",
@@ -1067,9 +1455,13 @@
     "year": 1855
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e65"
+    },
     "num": 98,
     "author": "Virginia Woolf",
     "country": "United Kingdom",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/mrs-dalloway.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/Mrs_Dalloway\n",
@@ -1078,9 +1470,13 @@
     "year": 1925
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e66"
+    },
     "num": 99,
     "author": "Virginia Woolf",
     "country": "United Kingdom",
+    "genres": [ "Novel", "Fiction" ],
     "imageLink": "images/to-the-lighthouse.jpg",
     "language": "English",
     "link": "https://en.wikipedia.org/wiki/To_the_Lighthouse\n",
@@ -1089,9 +1485,13 @@
     "year": 1927
   },
   {
+    "_id": {
+      "$oid": "60015c93254d7a0b28473e67"
+    },
     "num": 100,
     "author": "Marguerite Yourcenar",
     "country": "France/Belgium",
+    "genres": [ "Novel", "Historical", "Filosofical" ],
     "imageLink": "images/memoirs-of-hadrian.jpg",
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Memoirs_of_Hadrian\n",
