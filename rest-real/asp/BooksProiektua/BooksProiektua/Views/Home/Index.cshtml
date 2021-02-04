@@ -23,25 +23,25 @@
             <!-- First Photo Grid-->
             <div class="w3-row-padding w3-padding-16 w3-center" id="food">
                 <h2>Featured Books</h2><br>
-                <div class="w3-quarter hover">
+                <div class="w3-quarter hover" onclick="location.href = './SelectOne?num=4';">
                     <img src="~/images/the-epic-of-gilgamesh.jpg" alt="Sandwich" style="height:300px">
-                    <h3>@Html.ActionLink("The Epic of Gilgamesh", "SelectOne", new { num = 4 })</h3>
+                    <h3>The Epic of Gilgamesh</h3>
                     <br />
                     <p>An epic poem from ancient Mesopotamia, regarded as the earliest surviving notable literature and the second oldest religious text.</p>
                 </div>
-                <div class="w3-quarter hover">
+                <div class="w3-quarter hover" onclick="location.href = './SelectOne?num=6';">
                     <img src="~/images/one-thousand-and-one-nights.jpg" alt="Steak" style="height: 300px">
-                    <h3>@Html.ActionLink("One Thousand and One Nights", "SelectOne", new { num = 6 })</h3>
+                    <h3>One Thousand and One Nights</h3>
                     <p>A collection of Middle Eastern folk tales compiled in Arabic during the Islamic Golden Age. It is often known in English as the Arabian Nights.</p>
                 </div>
-                <div class="w3-quarter hover">
+                <div class="w3-quarter hover" onclick="location.href = './SelectOne?num=17';">
                     <img src="~/images/don-quijote-de-la-mancha.jpg" alt="Cherries" style="height: 300px">
-                    <h3>@Html.ActionLink("Don Quijote de la Mancha", "SelectOne", new { num = 17 })</h3>
+                    <h3>Don Quijote de la Mancha</h3>
                     <p>The adventures of a noble from La Mancha, who reads so many chivalric romances that he loses his mind and decides to become a knight-errant.</p>
                 </div>
-                <div class="w3-quarter hover">
+                <div class="w3-quarter hover" onclick="location.href = './SelectOne?num=30';">
                     <img src="~/images/medea.jpg" alt="Pasta and Wine" style="height: 300px">
-                    <h3>@Html.ActionLink("Medea", "SelectOne", new { num = 30 })</h3>
+                    <h3>Medea</h3>
                     <br />
                     <p>An ancient Greek tragedy written by Euripides, based upon the myth of Jason and Medea, a former princess of the "barbarian" kingdom of Colchis.</p>
                 </div>
@@ -63,33 +63,17 @@
             <!-- Footer -->
             <footer class="w3-row-padding w3-padding-32">
                 <div class="w3-third" style="margin-right:200px; margin-left:75px;">
-                    <h3>GENRES</h3>
-                    <p>Are you interested in any particular genre? You can choose to display all our available works from any particular genre by clicking on their names!</p>
+                    <h2>GENRES</h2>
+                    <p style="font-size:16px;">Are you interested in any particular genre? You can choose to display all our available works from any particular genre by clicking on their names!</p>
                 </div>
 
-                @*<div class="w3-third">
-                    <h3>BLOG POSTS</h3>
-                    <ul class="w3-ul w3-hoverable">
-                        <li class="w3-padding-16">
-                            <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-                            <span class="w3-large">Lorem</span><br>
-                            <span>Sed mattis nunc</span>
-                        </li>
-                        <li class="w3-padding-16">
-                            <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-                            <span class="w3-large">Ipsum</span><br>
-                            <span>Praes tinci sed</span>
-                        </li>
-                    </ul>
-                </div>*@
-
-                <div class="w3-third w3-serif">
+                <div class="w3-third w3-serif" style="font-size:16px;">
                     <p style="margin-top: 50px;">
-                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Fantasy", "SelectGenre", new { genre = "Fantasy" })</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Historical", "SelectGenre", new { genre = "Historical" })</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Filosofical", "SelectGenre", new { genre = "Filosofical" })</span>
-                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Mithological", "SelectGenre", new { genre = "Mithological" })</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Biographical", "SelectGenre", new { genre = "Biographical" })</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Mistery", "SelectGenre", new { genre = "Mistery" })</span>
-                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Poetry", "SelectGenre", new { genre = "Poetry" })</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Fiction", "SelectGenre", new { genre = "Fiction" })</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Novel", "SelectGenre", new { genre = "Novel" })</span>
-                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Romance", "SelectGenre", new { genre = "Romance" })</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Horror", "SelectGenre", new { genre = "Horror" })</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Satire", "SelectGenre", new { genre = "Satire" })</span>
-                        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Political", "SelectGenre", new { genre = "Political" })</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Drama", "SelectGenre", new { genre = "Drama" })</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">@Html.ActionLink("Tragedy", "SelectGenre", new { genre = "Tragedy" })</span>
+                        <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Fantasy", "SelectGenre", new { genre = "Fantasy" })</span> <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Historical", "SelectGenre", new { genre = "Historical" })</span> <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Filosofical", "SelectGenre", new { genre = "Filosofical" })</span>
+                        <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Mithological", "SelectGenre", new { genre = "Mithological" })</span> <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Biographical", "SelectGenre", new { genre = "Biographical" })</span> <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Mistery", "SelectGenre", new { genre = "Mistery" })</span>
+                        <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Poetry", "SelectGenre", new { genre = "Poetry" })</span> <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Fiction", "SelectGenre", new { genre = "Fiction" })</span> <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Novel", "SelectGenre", new { genre = "Novel" })</span>
+                        <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Romance", "SelectGenre", new { genre = "Romance" })</span> <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Horror", "SelectGenre", new { genre = "Horror" })</span> <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Satire", "SelectGenre", new { genre = "Satire" })</span>
+                        <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Political", "SelectGenre", new { genre = "Political" })</span> <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Drama", "SelectGenre", new { genre = "Drama" })</span> <span class="w3-tag w3-dark-grey w3-margin-bottom">@Html.ActionLink("Tragedy", "SelectGenre", new { genre = "Tragedy" })</span>
 
                     </p>
                 </div>
