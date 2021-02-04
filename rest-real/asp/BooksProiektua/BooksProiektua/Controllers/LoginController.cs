@@ -146,6 +146,8 @@ namespace BooksProiektua.Controllers
 
                     await client.PostAsJsonAsync<User>("api/user/", user);
 
+                    BooksProiektua.Models.User.loged = true;
+
                     //returning the employee list to view  
                     return RedirectToAction("../Home/Index");
 
