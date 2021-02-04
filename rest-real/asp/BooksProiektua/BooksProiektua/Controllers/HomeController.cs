@@ -94,6 +94,7 @@ namespace BooksProiektua.Controllers
                 {
                     BookList.Add(BookInfo[k]);
                 }
+                BookList[0].max = BookInfo.Count;
 
                 //returning the employee list to view  
                 return View(BookList);

@@ -29,7 +29,10 @@
             </div>
             <div style="text-align:right; float:right" class="w3-half">
                 <h1 style="background-color:#cccccc; border-radius:10px">
-                    @Html.ActionLink(">", "Select", new { i = (int.Parse(Request.Params["i"]) + 10) })
+                    @if (int.Parse(Request.Params["i"]) + 10 < Model.First().max)
+                    {
+                        @Html.ActionLink(">", "Select", new { i = (int.Parse(Request.Params["i"]) + 10) })
+                    }
                 </h1>
             </div>
         </div>
@@ -86,7 +89,10 @@
         </div>
         <div style="text-align:right; float:right" class="w3-half">
             <h1 style="background-color:#cccccc; border-radius:10px">
-                @Html.ActionLink(">", "Select", new { i = (int.Parse(Request.Params["i"]) + 10) })
+                @if (int.Parse(Request.Params["i"]) + 10 < Model.First().max)
+                {
+                    @Html.ActionLink(">", "Select", new { i = (int.Parse(Request.Params["i"]) + 10) })
+                }
             </h1>
         </div>
     </div>
