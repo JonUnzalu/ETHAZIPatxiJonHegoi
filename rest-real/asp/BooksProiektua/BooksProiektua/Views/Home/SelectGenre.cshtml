@@ -1,8 +1,9 @@
 ﻿@model IEnumerable<BooksProiektua.Models.Book>
 
 @{
-    ViewBag.Title = "Select";
+    ViewBag.Title = "SelectGenre";
 }
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,22 +18,7 @@
 </head>
 
 <body>
-    <table class="table table-dark table-striped" style="font-size:18px;">
-        <div class="divBg w3-row-padding w3-padding-16 w3-container">
-            <div style="text-align:left; float:left" class="w3-half">
-                <h1 style="background-color:#cccccc; border-radius:10px">
-                    @if (int.Parse(Request.Params["i"]) > 0)
-                    {
-                        @Html.ActionLink("<", "Select", new { i = (int.Parse(Request.Params["i"]) - 10) })
-                    }
-                </h1>
-            </div>
-            <div style="text-align:right; float:right" class="w3-half">
-                <h1 style="background-color:#cccccc; border-radius:10px">
-                    @Html.ActionLink(">", "Select", new { i = (int.Parse(Request.Params["i"]) + 10) })
-                </h1>
-            </div>
-        </div>
+    <table class="table table-dark table-striped" style="font-size:18px; margin-top:50px;">
         <thead>
             <tr>
                 <th>
@@ -75,19 +61,5 @@
         </tbody>
 
     </table>
-    <div class="divBg w3-row-padding w3-padding-16 w3-container">
-        <div style="text-align:left; float:left" class="w3-half">
-            <h1 style="background-color:#cccccc; border-radius:10px">
-                @if (int.Parse(Request.Params["i"]) > 0)
-                {
-                    @Html.ActionLink("<", "Select", new { i = (int.Parse(Request.Params["i"]) - 10) })
-                }
-            </h1>
-        </div>
-        <div style="text-align:right; float:right" class="w3-half">
-            <h1 style="background-color:#cccccc; border-radius:10px">
-                @Html.ActionLink(">", "Select", new { i = (int.Parse(Request.Params["i"]) + 10) })
-            </h1>
-        </div>
-    </div>
 </body>
+
