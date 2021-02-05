@@ -101,23 +101,12 @@ public class BookController {
     
     /**
      *
-     * A method to get a single book using the num as the variable
+     * A method to get all the countries
      * 
      */
     @GetMapping("book/countries")
     public List<String> getCountries() {
         return bookRepository.findAllCountries();
-    }
-
-    /**
-     *
-     * A method to get books using ids as the variable
-     * 
-     */
-    @GetMapping("books/{ids}")
-    public List<Book> getBooks(@PathVariable String ids) {
-        List<String> listIds = asList(ids.split(","));
-        return bookRepository.findAll(listIds);
     }
 
     /**
@@ -141,24 +130,13 @@ public class BookController {
     
     /**
      *
-     * A method to delete a single book using the num as a variable
+     * A method to delete a single book using the id as a variable
      * 
      */
     @DeleteMapping("book/delete/{num}")
     public Long deleteBookByNum(@PathVariable int num) {
         return bookRepository.deleteOneNum(num);
     }
-
-    /**
-     *
-     * A method to delete various books using ids as the variable at once
-     * 
-     */
-    @DeleteMapping("books/{ids}")
-    public Long deleteBooks(@PathVariable String ids) {
-        List<String> listIds = asList(ids.split(","));
-        return bookRepository.delete(listIds);
-    } 
 
     /**
      *
@@ -177,25 +155,6 @@ public class BookController {
     @PutMapping("book")
     public Book putBook(@RequestBody Book book) {
         return bookRepository.update(book);
-    }
-
-    /**
-     *
-     * A method to update various books at once
-     *
-     */
-    @PutMapping("books")
-    public Long putBook(@RequestBody List<Book> books) {
-        return bookRepository.update(books);
-    }
-
-    /**
-     *
-     * A method to get the average amount of pages of all the books
-     */
-    @GetMapping("books/averagePages")
-    public Double averagePages() {
-        return bookRepository.getAveragePages();
     }
 
     /**
