@@ -88,7 +88,7 @@ public class Genre {
     
     /**
      *
-     * This is the equals
+     * This is the equals. It compares if two objects are equal
      *
      */
     @Override
@@ -104,7 +104,7 @@ public class Genre {
     
     /**
      *
-     * This is the hashCode of this model
+     * This is the hashCode of this model. Hash code returns an int, that is used to compare if two objects are equal. If two objects are equal they must return the same hash code
      */
     @Override
     public int hashCode() {

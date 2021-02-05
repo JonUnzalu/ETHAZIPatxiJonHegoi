@@ -48,7 +48,7 @@ public class AveragePageBOOK {
 
     /**
      *
-     * This is the hashCode of the starter
+     * This is the hashCode of the starter. Hash code returns an int, that is used to compare if two objects are equal. If two objects are equal they must return the same hash code
      */
     @Override
     public int hashCode() {
