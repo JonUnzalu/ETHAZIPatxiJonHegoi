@@ -191,15 +191,6 @@ public class BookController {
 
     /**
      *
-     * A method to get the average amount of pages of all the books
-     */
-    @GetMapping("books/averagePages")
-    public Double averagePages() {
-        return bookRepository.getAveragePages();
-    }
-
-    /**
-     *
      *A method to hanlde all the exceptions
      *
      */

@@ -105,10 +105,5 @@ public interface BookRepository {
      */
     long update(List<Book> books);
 
-    /**
-     *
-     * Show the average of the pages for each book
-     */
-    double getAveragePages();
     
 }

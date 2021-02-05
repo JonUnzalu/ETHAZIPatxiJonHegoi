@@ -76,19 +76,6 @@ public class UserController {
     
     /**
      *
-     * A method to get a single user using the id as the variable
-     * 
-     */
-    @GetMapping("user/{id}")
-    public ResponseEntity<User> getUser(@PathVariable String id) {
-        User user = userRepository.findOne(id);
-        if (user == null)
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        return ResponseEntity.ok(user);
-    }
-    
-    /**
-     *
      * A method to get a single user using the num as the variable
      * 
      */

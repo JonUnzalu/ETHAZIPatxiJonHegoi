@@ -30,7 +30,6 @@ import com.mongodb.TransactionOptions;
 import com.mongodb.WriteConcern;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.starter.dtos.AveragePageBOOK;
 import com.mongodb.starter.models.Book;
 import java.util.Collections;
 import javax.annotation.PostConstruct;
@@ -224,17 +223,9 @@ public class MongoDBBookRespository implements BookRepository {
         try (ClientSession clientSession = client.startSession()) {
             return clientSession.withTransaction(
                     () -> bookCollection.bulkWrite(clientSession, writes).getModifiedCount(), txnOptions);
-        }    }
-    
-    /**
-     *
-     * Average of pages for each book
-     */
-    @Override
-    public double getAveragePages() {
-        List<Bson> pipeline = asList(group(new BsonNull(), avg("averagePages", "$pages")), project(excludeId()));
-        return bookCollection.aggregate(pipeline, AveragePageBOOK.class).first().getAveragePages();
+        }    
     }
+
     
     private List<ObjectId> mapToObjectIds(List<String> ids) {
         return ids.stream().map(ObjectId::new).collect(Collectors.toList());
