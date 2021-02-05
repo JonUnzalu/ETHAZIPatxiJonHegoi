@@ -47,13 +47,23 @@ public class MongoDBUserRepository implements UserRepository{
     void init() {
         userCollection = client.getDatabase("test").getCollection("users", User.class);
     }
-    
+    /**
+     *
+     * Save one user
+     *
+     */
     @Override
     public User save(User user) {
         user.setId(new ObjectId());
         userCollection.insertOne(user);
         return user;
     }
+    
+    /**
+     *
+     * Save all users
+     *
+     */
 
     @Override
     public List<User> saveAll(List<User> users) {
@@ -65,63 +75,116 @@ public class MongoDBUserRepository implements UserRepository{
             }, txnOptions);
         }
     }
+    
+    /**
+     *
+     * Find all users
+     *
+     */
 
     @Override
     public List<User> findAll() {
         return userCollection.find().into(new ArrayList<>());
     }
+    
+    /**
+     *
+     * Find all users by id
+     *
+     */
 
     @Override
     public List<User> findAll(List<User> ids) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    /**
+     *
+     * Find one user
+     *
+     */
     @Override
     public User findOne(String id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    /**
+     *
+     * Find one user by num
+     *
+     */
     @Override
     public User findOneNum(int number) {
         return userCollection.find(in("num", number)).first();
     }
-
+    /**
+     *
+     * Find one user by name as string
+     *
+     */
     @Override
     public User findOneUser(String name) {
         return userCollection.find(eq("username", name)).first();
     }
-    
+    /**
+     *
+     * Find one user by password as string
+     *
+     */
     @Override
     public User findOneUserPass(String password) {
         return userCollection.find(eq("password", password)).first();
     }
-    
+    /**
+     *
+     * Count all users
+     *
+     */
     @Override
     public long count() {
         return userCollection.countDocuments();
     }
-
+    /**
+     *
+     * Delete one user by id
+     *
+     */
     @Override
     public long delete(String id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    /**
+     *
+     * Delete one user by num
+     *
+     */
     @Override
     public long deleteOneUser(int num) {
         return userCollection.deleteOne(eq("num", num)).getDeletedCount();  
     }
-
+    /**
+     *
+     * Delete all users
+     *
+     */
     @Override
     public long deleteAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    /**
+     *
+     * Update one user
+     *
+     */
     @Override
     public User update(User user) {
         FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
         return userCollection.findOneAndReplace(eq("num", user.getNum()) , user, options);
     }
-    
+    /**
+     *
+     * The map of object ids
+     *
+     */
     private List<ObjectId> mapToObjectIds(List<String> ids) {
         return ids.stream().map(ObjectId::new).collect(Collectors.toList());
     }
