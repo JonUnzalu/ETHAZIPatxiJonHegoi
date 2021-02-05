@@ -27,7 +27,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * MongoDB repositories
+ * MongoDB User repository
  */
 @Repository
 public class MongoDBUserRepository implements UserRepository{
@@ -48,6 +48,11 @@ public class MongoDBUserRepository implements UserRepository{
         userCollection = client.getDatabase("test").getCollection("users", User.class);
     }
     
+    /**
+     *
+     * Saves one user
+     *
+     */
     @Override
     public User save(User user) {
         user.setId(new ObjectId());
@@ -55,6 +60,11 @@ public class MongoDBUserRepository implements UserRepository{
         return user;
     }
 
+    /**
+     *
+     * Saves more than one user
+     *
+     */
     @Override
     public List<User> saveAll(List<User> users) {
         try (ClientSession clientSession = client.startSession()) {
@@ -65,53 +75,104 @@ public class MongoDBUserRepository implements UserRepository{
             }, txnOptions);
         }
     }
-
+    
+    
+    /**
+     *
+     * Returns an arraylist with all the users stored in it 
+     *
+     */
     @Override
     public List<User> findAll() {
         return userCollection.find().into(new ArrayList<>());
     }
 
+    /**
+     *
+     * Returns an arraylist with all the users stored in it 
+     *
+     */
     @Override
     public List<User> findAll(List<User> ids) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     *
+     * Find one user using the num field
+     *
+     */
     @Override
     public User findOneNum(int number) {
         return userCollection.find(in("num", number)).first();
     }
 
+    /**
+     *
+     * Find one user using the username field
+     *
+     */
     @Override
     public User findOneUser(String name) {
         return userCollection.find(eq("username", name)).first();
     }
     
+    /**
+     *
+     * Find one user using the password field
+     *
+     */
     @Override
     public User findOneUserPass(String password) {
         return userCollection.find(eq("password", password)).first();
     }
     
+    /**
+     *
+     * Count the amount of users
+     *
+     */
     @Override
     public long count() {
         return userCollection.countDocuments();
     }
 
+    /**
+    *
+    * Delete one user using the num field
+    *
+    */
     @Override
     public long deleteOneUser(int num) {
         return userCollection.deleteOne(eq("num", num)).getDeletedCount();  
     }
 
+    /**
+     *
+     * Delete all users
+     *
+     */
     @Override
     public long deleteAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     *
+     * Update one user
+     *
+     */
     @Override
     public User update(User user) {
         FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
         return userCollection.findOneAndReplace(eq("num", user.getNum()) , user, options);
     }
     
+    /**
+     *
+     * It converts an array of ids to a map object
+     *
+     */
     private List<ObjectId> mapToObjectIds(List<String> ids) {
         return ids.stream().map(ObjectId::new).collect(Collectors.toList());
     }
