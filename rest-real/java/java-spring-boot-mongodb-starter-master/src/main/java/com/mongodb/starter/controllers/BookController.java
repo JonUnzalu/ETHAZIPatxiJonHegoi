@@ -101,7 +101,7 @@ public class BookController {
     
     /**
      *
-     * A method to get a single book using the num as the variable
+     * A method to get all the countries
      * 
      */
     @GetMapping("book/countries")
@@ -130,7 +130,7 @@ public class BookController {
     
     /**
      *
-     * A method to delete a single book using the num as a variable
+     * A method to delete a single book using the id as a variable
      * 
      */
     @DeleteMapping("book/delete/{num}")
