@@ -244,7 +244,7 @@ public class Book {
 
     /**
      *
-     * This is the equals
+     * This is the equals. It compares if two objects are equal
      *
      */
     @Override
@@ -261,7 +261,7 @@ public class Book {
     
     /**
      *
-     * This is the hashCode
+     * This is the hashCode. Hash code returns an int, that is used to compare if two objects are equal. If two objects are equal they must return the same hash code
      */
     @Override
     public int hashCode() {

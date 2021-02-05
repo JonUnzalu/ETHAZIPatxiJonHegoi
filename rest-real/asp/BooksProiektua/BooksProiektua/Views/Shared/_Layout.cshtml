@@ -11,12 +11,19 @@
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                @Html.ActionLink("Library", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Books", "Select", "Home", new { i = 0 }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Insert book", "InsertForm", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Login", "LoginForm", "Login", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Register", "RegisterForm", "Login", new { area = "" }, new { @class = "navbar-brand" })
+            <div class="navbar-header navbar-right" style="text-align:center">
+                @Html.ActionLink("Main Page", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Library", "Select", "Home", new { i = 0 }, new { @class = "navbar-brand" })
+                @if (BooksProiektua.Models.User.loged != true)
+                {
+                    @Html.ActionLink("Login", "LoginForm", "Login", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Register", "RegisterForm", "Login", new { area = "" }, new { @class = "navbar-brand" })
+                }
+                else
+                {
+                    @Html.ActionLink("Insert book", "InsertForm", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Log Out", "Logout", "Login", new { area = "" }, new { @class = "navbar-brand" })
+                }
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">

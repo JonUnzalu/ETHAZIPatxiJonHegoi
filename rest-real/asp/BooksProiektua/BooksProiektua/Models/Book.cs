@@ -22,6 +22,7 @@ namespace BooksProiektua.Models
         public int pages { get; set; }
         public String title { get; set; }
         public int year { get; set; }
+        public int max { get; set; }
 
         public String toString()
         {

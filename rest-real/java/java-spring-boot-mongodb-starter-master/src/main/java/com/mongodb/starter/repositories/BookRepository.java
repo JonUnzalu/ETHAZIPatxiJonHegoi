@@ -39,13 +39,6 @@ public interface BookRepository {
 
     /**
      *
-     * select all books by id
-     *
-     */
-    List<Book> findAll(List<String> ids);
-
-    /**
-     *
      * The id of the book
      *
      */
@@ -80,13 +73,6 @@ public interface BookRepository {
 
     /**
      *
-     * Delete book
-     *
-     */
-    long delete(List<String> _ids);
-
-    /**
-     *
      * Delete all books
      */
     long deleteAll();
@@ -97,18 +83,5 @@ public interface BookRepository {
      *
      */
     Book update(Book book);
-
-    /**
-     *
-     * Update books
-     *
-     */
-    long update(List<Book> books);
-
-    /**
-     *
-     * Show the average of the pages for each book
-     */
-    double getAveragePages();
     
 }

@@ -66,6 +66,7 @@ namespace BooksProiektua.Controllers
                     }
                     if (found)
                     {
+                        BooksProiektua.Models.User.loged = true;
                         return RedirectToAction("../Home/Index");
                     }
                     else
@@ -81,6 +82,12 @@ namespace BooksProiektua.Controllers
                     return RedirectToAction("../Login/LoginForm");
                 }
             }
+        }
+
+        public ActionResult Logout()
+        {
+            BooksProiektua.Models.User.loged = false;
+            return RedirectToAction("../Home/Index");
         }
 
         public ActionResult RegisterForm()
@@ -138,6 +145,8 @@ namespace BooksProiektua.Controllers
                     user.num = max + 1;
 
                     await client.PostAsJsonAsync<User>("api/user/", user);
+
+                    BooksProiektua.Models.User.loged = true;
 
                     //returning the employee list to view  
                     return RedirectToAction("../Home/Index");

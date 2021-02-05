@@ -296,6 +296,7 @@
     <Content Include="Views\Login\LoginForm.cshtml" />
     <Content Include="Views\Login\RegisterForm.cshtml" />
     <Content Include="Views\Home\SelectOne.cshtml" />
+    <Content Include="Views\Home\SelectGenre.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

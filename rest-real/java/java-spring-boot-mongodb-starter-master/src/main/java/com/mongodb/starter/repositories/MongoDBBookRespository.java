@@ -30,7 +30,6 @@ import com.mongodb.TransactionOptions;
 import com.mongodb.WriteConcern;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.starter.dtos.AveragePageBOOK;
 import com.mongodb.starter.models.Book;
 import java.util.Collections;
 import javax.annotation.PostConstruct;
@@ -94,17 +93,6 @@ public class MongoDBBookRespository implements BookRepository {
     public List<Book> findAll() {
         return bookCollection.find().into(new ArrayList<>());
     }
-
-    /**
-     *
-     * Find all books by id
-     *
-     */
-    @Override
-    public List<Book> findAll(List<String> ids) {
-        return bookCollection.find(in("_id", mapToObjectIds(ids))).into(new ArrayList<>());
-    }
-    
     
     /**
      *
@@ -167,20 +155,6 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * Delete one book by id
-     *
-     */
-    @Override
-    public long delete(List<String> ids) {
-        try (ClientSession clientSession = client.startSession()) {
-            return clientSession.withTransaction(
-                    () -> bookCollection.deleteMany(clientSession, in("_id", mapToObjectIds(ids))).getDeletedCount(),
-                    txnOptions);
-        }    
-    }
-    
-    /**
-     *
      * Delete one book by num
      *
      */
@@ -209,31 +183,6 @@ public class MongoDBBookRespository implements BookRepository {
     public Book update(Book book) {
         FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
         return bookCollection.findOneAndReplace(eq("num", book.getNum()), book, options);    
-    }
-
-    /**
-     *
-     * Update books
-     *
-     */
-    @Override
-    public long update(List<Book> books) {
-        List<WriteModel<Book>> writes = books.stream()
-                                                 .map(p -> new ReplaceOneModel<>(eq("_id", p.getId()), p))
-                                                 .collect(Collectors.toList());
-        try (ClientSession clientSession = client.startSession()) {
-            return clientSession.withTransaction(
-                    () -> bookCollection.bulkWrite(clientSession, writes).getModifiedCount(), txnOptions);
-        }    }
-    
-    /**
-     *
-     * Average of pages for each book
-     */
-    @Override
-    public double getAveragePages() {
-        List<Bson> pipeline = asList(group(new BsonNull(), avg("averagePages", "$pages")), project(excludeId()));
-        return bookCollection.aggregate(pipeline, AveragePageBOOK.class).first().getAveragePages();
     }
     
     private List<ObjectId> mapToObjectIds(List<String> ids) {

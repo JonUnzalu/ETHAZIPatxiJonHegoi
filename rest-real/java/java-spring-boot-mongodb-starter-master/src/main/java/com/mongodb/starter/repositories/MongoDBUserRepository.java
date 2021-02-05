@@ -103,6 +103,7 @@ public class MongoDBUserRepository implements UserRepository{
      *
      */
     @Override
+<<<<<<< HEAD
     public User findOne(String id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -113,6 +114,8 @@ public class MongoDBUserRepository implements UserRepository{
      *
      */
     @Override
+=======
+>>>>>>> ae2020acbd0864060f4117f64114a8466656f9a2
     public User findOneNum(int number) {
         return userCollection.find(in("num", number)).first();
     }
@@ -149,6 +152,7 @@ public class MongoDBUserRepository implements UserRepository{
      *
      */
     @Override
+<<<<<<< HEAD
     public long delete(String id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -158,6 +162,8 @@ public class MongoDBUserRepository implements UserRepository{
      *
      */
     @Override
+=======
+>>>>>>> ae2020acbd0864060f4117f64114a8466656f9a2
     public long deleteOneUser(int num) {
         return userCollection.deleteOne(eq("num", num)).getDeletedCount();  
     }
