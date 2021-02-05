@@ -155,20 +155,6 @@ public class MongoDBBookRespository implements BookRepository {
 
     /**
      *
-     * Delete one book by id
-     *
-     */
-    @Override
-    public long delete(List<String> ids) {
-        try (ClientSession clientSession = client.startSession()) {
-            return clientSession.withTransaction(
-                    () -> bookCollection.deleteMany(clientSession, in("_id", mapToObjectIds(ids))).getDeletedCount(),
-                    txnOptions);
-        }    
-    }
-    
-    /**
-     *
      * Delete one book by num
      *
      */

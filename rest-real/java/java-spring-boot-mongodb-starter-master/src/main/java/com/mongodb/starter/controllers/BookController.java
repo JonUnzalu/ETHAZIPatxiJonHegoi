@@ -140,17 +140,6 @@ public class BookController {
 
     /**
      *
-     * A method to delete various books using ids as the variable at once
-     * 
-     */
-    @DeleteMapping("books/{ids}")
-    public Long deleteBooks(@PathVariable String ids) {
-        List<String> listIds = asList(ids.split(","));
-        return bookRepository.delete(listIds);
-    } 
-
-    /**
-     *
      * A method to delete all the books (currently disabled)
      */
     @DeleteMapping("books")

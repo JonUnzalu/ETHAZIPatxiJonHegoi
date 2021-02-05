@@ -73,13 +73,6 @@ public interface BookRepository {
 
     /**
      *
-     * Delete book
-     *
-     */
-    long delete(List<String> _ids);
-
-    /**
-     *
      * Delete all books
      */
     long deleteAll();
