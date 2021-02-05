@@ -111,17 +111,6 @@ public class BookController {
 
     /**
      *
-     * A method to get books using ids as the variable
-     * 
-     */
-    @GetMapping("books/{ids}")
-    public List<Book> getBooks(@PathVariable String ids) {
-        List<String> listIds = asList(ids.split(","));
-        return bookRepository.findAll(listIds);
-    }
-
-    /**
-     *
      * A method to get the amount of books stored
      */
     @GetMapping("books/count")

@@ -93,17 +93,6 @@ public class MongoDBBookRespository implements BookRepository {
     public List<Book> findAll() {
         return bookCollection.find().into(new ArrayList<>());
     }
-
-    /**
-     *
-     * Find all books by id
-     *
-     */
-    @Override
-    public List<Book> findAll(List<String> ids) {
-        return bookCollection.find(in("_id", mapToObjectIds(ids))).into(new ArrayList<>());
-    }
-    
     
     /**
      *

@@ -39,13 +39,6 @@ public interface BookRepository {
 
     /**
      *
-     * select all books by id
-     *
-     */
-    List<Book> findAll(List<String> ids);
-
-    /**
-     *
      * The id of the book
      *
      */
