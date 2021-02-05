@@ -184,23 +184,6 @@ public class MongoDBBookRespository implements BookRepository {
         FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
         return bookCollection.findOneAndReplace(eq("num", book.getNum()), book, options);    
     }
-
-    /**
-     *
-     * Update books
-     *
-     */
-    @Override
-    public long update(List<Book> books) {
-        List<WriteModel<Book>> writes = books.stream()
-                                                 .map(p -> new ReplaceOneModel<>(eq("_id", p.getId()), p))
-                                                 .collect(Collectors.toList());
-        try (ClientSession clientSession = client.startSession()) {
-            return clientSession.withTransaction(
-                    () -> bookCollection.bulkWrite(clientSession, writes).getModifiedCount(), txnOptions);
-        }    
-    }
-
     
     private List<ObjectId> mapToObjectIds(List<String> ids) {
         return ids.stream().map(ObjectId::new).collect(Collectors.toList());

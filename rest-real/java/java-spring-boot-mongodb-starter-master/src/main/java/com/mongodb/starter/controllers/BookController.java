@@ -159,16 +159,6 @@ public class BookController {
 
     /**
      *
-     * A method to update various books at once
-     *
-     */
-    @PutMapping("books")
-    public Long putBook(@RequestBody List<Book> books) {
-        return bookRepository.update(books);
-    }
-
-    /**
-     *
      *A method to hanlde all the exceptions
      *
      */

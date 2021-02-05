@@ -83,13 +83,5 @@ public interface BookRepository {
      *
      */
     Book update(Book book);
-
-    /**
-     *
-     * Update books
-     *
-     */
-    long update(List<Book> books);
-
     
 }
