@@ -184,7 +184,12 @@ public class MongoDBBookRespository implements BookRepository {
         FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
         return bookCollection.findOneAndReplace(eq("num", book.getNum()), book, options);    
     }
-    
+     
+    /**
+     *
+     * It converts an array of ids to a map object
+     *
+     */
     private List<ObjectId> mapToObjectIds(List<String> ids) {
         return ids.stream().map(ObjectId::new).collect(Collectors.toList());
     }

@@ -27,7 +27,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * MongoDB repositories
+ * MongoDB User repository
  */
 @Repository
 public class MongoDBUserRepository implements UserRepository{
@@ -47,9 +47,10 @@ public class MongoDBUserRepository implements UserRepository{
     void init() {
         userCollection = client.getDatabase("test").getCollection("users", User.class);
     }
+    
     /**
      *
-     * Save one user
+     * Saves one user
      *
      */
     @Override
@@ -58,13 +59,12 @@ public class MongoDBUserRepository implements UserRepository{
         userCollection.insertOne(user);
         return user;
     }
-    
+
     /**
      *
-     * Save all users
+     * Saves more than one user
      *
      */
-
     @Override
     public List<User> saveAll(List<User> users) {
         try (ClientSession clientSession = client.startSession()) {
@@ -76,20 +76,20 @@ public class MongoDBUserRepository implements UserRepository{
         }
     }
     
+    
     /**
      *
-     * Find all users
+     * Returns an arraylist with all the users stored in it 
      *
      */
-
     @Override
     public List<User> findAll() {
         return userCollection.find().into(new ArrayList<>());
     }
-    
+
     /**
      *
-     * Find all users by id
+     * Returns an arraylist with all the users stored in it 
      *
      */
 
@@ -97,52 +97,49 @@ public class MongoDBUserRepository implements UserRepository{
     public List<User> findAll(List<User> ids) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     /**
      *
-     * Find one user
-     *
-     */
-    public User findOne(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    /**
-     *
-     * Find one user by num
+     * Find one user using the num field
      *
      */
     @Override
     public User findOneNum(int number) {
         return userCollection.find(in("num", number)).first();
     }
+
     /**
      *
-     * Find one user by name as string
+     * Find one user using the username field
      *
      */
     @Override
     public User findOneUser(String name) {
         return userCollection.find(eq("username", name)).first();
     }
+    
     /**
      *
-     * Find one user by password as string
+     * Find one user using the password field
      *
      */
     @Override
     public User findOneUserPass(String password) {
         return userCollection.find(eq("password", password)).first();
     }
+    
     /**
      *
-     * Count all users
+     * Count the amount of users
      *
      */
     @Override
     public long count() {
         return userCollection.countDocuments();
     }
+
     /**
+<<<<<<< HEAD
      *
      * Delete one user by id
      *
@@ -155,9 +152,16 @@ public class MongoDBUserRepository implements UserRepository{
      * Delete one user by num
      *
      */
+    /*
+    *
+    * Delete one user using the num field
+    *
+    */
+    @Override
     public long deleteOneUser(int num) {
         return userCollection.deleteOne(eq("num", num)).getDeletedCount();  
     }
+
     /**
      *
      * Delete all users
@@ -167,6 +171,7 @@ public class MongoDBUserRepository implements UserRepository{
     public long deleteAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     /**
      *
      * Update one user
@@ -177,9 +182,10 @@ public class MongoDBUserRepository implements UserRepository{
         FindOneAndReplaceOptions options = new FindOneAndReplaceOptions().returnDocument(AFTER);
         return userCollection.findOneAndReplace(eq("num", user.getNum()) , user, options);
     }
+    
     /**
      *
-     * The map of object ids
+     * It converts an array of ids to a map object
      *
      */
     private List<ObjectId> mapToObjectIds(List<String> ids) {
